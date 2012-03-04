@@ -1,0 +1,51 @@
+/* --------------------------------------------------------------
+
+   modules.css
+   * Style for different js module
+
+-------------------------------------------------------------- */
+
+/* sub content :: see js-hoverintent */
+.sub ul,
+.sub ol, 
+.sub dl                                             {margin:0 0 1em 1em;} /* LTR */
+.sub li                                             {line-height:1.5em;margin-left:0.8em; /* LTR */color:black;list-style:disc;}
+
+/* tipTip CSS - Version 1.2 */ 
+#tiptip_holder,
+.tiptip_holder                                      {display:none;position:absolute;top:0;left:0;z-index:99999;}
+.tip_top                                            {padding-bottom:5px;}
+.tip_bottom                                         {padding-top:5px;}
+.tip_right                                          {padding-left:5px;}
+.tip_left                                           {padding-right:5px;}
+#tiptip_content,
+.tiptip_content                                     {font-size:1em;color:@color_tooltip;text-shadow:@textshadow_tooltip;padding:0.3em 0.6em;border-width:@borderwidth_tooltip;border-style:solid;border-color:rgba(255,255,255,0.25);background:@background_tooltip_ie;background:@background_tooltip;.border-radius(@borderradius_tooltip);.box-shadow(@boxshadow_tooltip);}
+#tiptip_arrow,
+.tiptip_arrow, 
+#tiptip_arrow_inner,
+.tiptip_arrow_inner                                 {position:absolute;border-color:transparent;border-style:solid;border-width:6px;height:0;width:0;}
+.tip_top #tiptip_arrow,
+.tip_top .tiptip_arrow                              {border-top-color:@bordercolor_tooltip_arrow_rgb;border-top-color:@bordercolor_tooltip_arrow_rgba;}
+.tip_bottom #tiptip_arrow,
+.tip_bottom .tiptip_arrow                           {border-bottom-color:@bordercolor_tooltip_arrow_rgb;border-bottom-color:@bordercolor_tooltip_arrow_rgba;}
+.tip_right #tiptip_arrow,
+.tip_right .tiptip_arrow                            {border-right-color:@bordercolor_tooltip_arrow_rgb;border-right-color:@bordercolor_tooltip_arrow_rgba;}
+.tip_left #tiptip_arrow,
+.tip_left .tiptip_arrow                             {border-left-color:@bordercolor_tooltip_arrow_rgb;border-left-color:@bordercolor_tooltip_arrow_rgba;}
+.tip_top #tiptip_arrow_inner,
+.tip_top .tiptip_arrow_inner                        {margin-top:-7px;margin-left:-6px;border-top-color:@bordercolor_tooltip_arrow_inner_rgb;border-top-color:@bordercolor_tooltip_arrow_inner_rgba;}
+.tip_bottom #tiptip_arrow_inner,
+.tip_bottom .tiptip_arrow_inner                     {margin-top:-5px;margin-left:-6px;border-bottom-color:@bordercolor_tooltip_arrow_inner_rgb;border-bottom-color:@bordercolor_tooltip_arrow_inner_rgba;}
+.tip_right #tiptip_arrow_inner,
+.tip_right .tiptip_arrow_inner                      {margin-top:-6px;margin-left:-5px;border-right-color:@bordercolor_tooltip_arrow_inner_rgb;border-right-color:@bordercolor_tooltip_arrow_inner_rgba;}
+.tip_left #tiptip_arrow_inner,
+.tip_left .tiptip_arrow_inner                       {margin-top:-6px;margin-left:-7px;border-left-color:@bordercolor_tooltip_arrow_inner_rgb;border-left-color:@bordercolor_tooltip_arrow_inner_rgba;}
+
+/* webkitebkit Hacks */ 
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+body{}
+#tiptip_content                                     {padding:4px 8px 5px 8px;background-color:rgba(45,45,45,0.88);} 
+#tiptip_holder.tip_bottom #tiptip_arrow_inner       {border-bottom-color:rgba(45,45,45,0.88);} 
+#tiptip_holder.tip_top #tiptip_arrow_inner          {border-top-color:rgba(20,20,20,0.92);}
+}

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<public:component><public:attach event="ondocumentready" onevent="_(element)" />
+<script>
+/**
+ * (c) Marat Tanalin | http://tanalin.com/
+ * http://tanalin.com/en/projects/display-table-htc/
+ * @version 2011-09-15
+ */
+function _(e){var j=e.document;if(!j.querySelector){var f="dt-";window.XMLHttpRequest&&(f="-"+f);var m=function(a,c){for(var b=c.length;b--;)if(a===c[b])return!0;return!1},n=function(a,c){return(" "+a.className.replace(/\s+/g," ")+" ").indexOf(" "+c+" ")!=-1},g=function(a,c){c=c.replace(/^\s\s*/,"").replace(/\s\s*$/,"");if(c.length){var b=/\s+/;if(b.test(c))for(var b=c.split(b),d=b.length;d--;)g(a,b[d]);else a.className.length?n(a,c)||(a.className+=" "+c):a.className=c}},s=function(a,c){for(;a.firstChild;)c.appendChild(a.firstChild)}, o=function(a,c){g(c,a.nodeName);g(c,a.className)},p=function(a,c,b,d){for(var a=a.firstChild,h=[];a;)1===a.nodeType&&h.push(a),a=a.nextSibling;for(var a=[],e=h.length,i=0;i<e;i++){var k=h[i];"HR"!==k.nodeName&&a.push(k)}if(e=a.length){h=[];for(i=0;i<e;i++){var k=a[i],f=j.createElement(c);f.id=k.id;o(k,f);b(k,f);d.appendChild(f);h.push(f)}c=e-1;b=h[0];d=a[0];g(b,"first");g(b,d.nodeName+"-first");b=h[c];d=a[c];g(b,"last");g(b,d.nodeName+"-last");c||g(h[0],a[0].nodeName+"-first-last")}},q=function(a, c){p(a,"td",s,c)},t=function(a,c){var b;a:{for(b=a.firstChild;b;){if(1===b.nodeType)break a;b=b.nextSibling}b=null}b&&"table-cell"===b.currentStyle.getAttribute(f+"display")||n(a,"_dt-no-rows")?(b=j.createElement("tr"),c.appendChild(b),q(a,b)):p(a,"tr",q,c)},l=function(){for(var a=j.body.getElementsByTagName("*"),c=a.length,b=[];c--;){var d=a[c];"table"===d.currentStyle.getAttribute(f+"display")&&b.push(d)}return b},r=function(a){var c=a.nodeName;if(!m(c,"TABLE,TR,TD,TH,TBODY,THEAD,TFOOT".split(","))){var b= j.createElement("table"),d=j.createElement("tbody"),e=a.currentStyle.getAttribute(f+"border-spacing");b.cellSpacing=null===e?0:parseInt(e,10);b.cellPadding=0;d.vAlign="baseline";o(a,b);t(a,d);b.appendChild(d);if(m(c,["DT","DD","LI","FORM","A"])){if(a.innerHTML="",a.appendChild(b),"A"===c){if("auto"===a.currentStyle.cursor)a.style.cursor="pointer";b.onclick=function(){this.parentNode.click()}}}else b.id=a.id,a.replaceNode(b)}};if(m(e.nodeName,["HTML","BODY"])){e=l();for(l=e.length;l--;)r(e[l])}else r(e)}}
+</script>
+</public:component>

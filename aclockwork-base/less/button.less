@@ -1,0 +1,49 @@
+/* --------------------------------------------------------------
+
+   button.css
+   * button style
+
+-------------------------------------------------------------- */
+
+/* more */
+/*------------------------------------------------*/
+
+.more                                               {#link > .metadata(@color_more,@background_more,block);}
+
+/* buttons informations */
+/*------------------------------------------------*/
+
+.submit                                             {#link > .button(@color_button_submit,@background_button_submit);}
+.access                                             {#link > .button(@color_button_access,@background_button_access);}
+.action                                             {#link > .button(@color_button_action,@background_button_action);}
+.delete                                             {#link > .button(@color_button_cancel,@background_button_cancel);}
+.select                                             {#link > .button(@color_button_select,@background_button_select);}
+.cancel                                             {#link > .button(@color_button_cancel,@background_button_cancel);}
+.danger                                             {#link > .button(@color_button_danger,@background_button_danger);}
+#edit-delete,
+#edit-cancel                                        {#link > .buttoninput(@color_button_cancel,@background_button_cancel);} 
+button,
+input.form-button,
+input.form-submit                                   {#link > .buttoninput(@color_button_submit,@background_button_submit);}
+input[type=button],
+input[type=submit]                                  {#link > .buttoninput(@color_button_submit,@background_button_submit);}
+
+.submit.left,
+.access.left,
+.action.left,
+.delete.left,
+.select.left,
+.cancel.left,
+.danger.left,
+.indicator.left                                     {margin-right:10px !important;}
+.submit.right,
+.access.right,
+.action.right,
+.delete.right,
+.select.right,
+.cancel.right,
+.danger.right,
+.indicator.right                                    {margin-left:10px !important;}
+
+a.checked                                           {text-shadow:-1px -1px #666;}
+.submit a.checked                                   {color:@color_button_checked;background-color:lighten(@background_button_submit,20%);background-image:none;}

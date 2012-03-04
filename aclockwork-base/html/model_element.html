@@ -1,0 +1,2275 @@
+<script>
+      // Lazy load Placeholder for old browser
+      head.ready(function(){
+        $("img").lazyload({ threshold : 200 });
+        $('input[placeholder], textarea[placeholder]').placeholder();
+      });
+      // TipTip - Tooltip 
+      head.ready(function() {
+        $("a.tooltip,form .form-required").tipTip({defaultPosition: "right"});
+        $("#nav_pagination a").tipTip({defaultPosition: "bottom"});
+        $("#nav_tabs ul").idTabs();
+        $("#nav_tabs_feed ul").idTabs();
+      });
+      // View
+      head.ready(function(){
+        $('#nav_anchor').onePageNav();
+        $('table.mailbox tbody td').biggerlink({clickableclass:'mailboxclickable',hoverclassparent:'mailboxhover'});
+        $('#js-list-view li').biggerlink({clickableclass:'listclickable',otherstriggermaster:false});
+        $('.block_gallery img').jcaption({
+           copyStyle: true,
+           animate: true,
+           show: {height: "show"},
+           hide: {height: "hide"}
+         });
+      });
+      head.ready(function(){
+        $("a").click(function(event) {
+          event.preventDefault();
+        });
+      });
+      head.ready(function(){
+        prettyPrint();
+        $("div.block_collapse,div.code").collapse({show: function(){
+            this.animate({
+                    opacity: 'toggle', 
+                    height: 'toggle'
+                }, 300);
+            },
+            hide : function() {
+                this.animate({
+                    opacity: 'toggle', 
+                    height: 'toggle'
+                }, 300);
+            },
+            head: "h3",
+            group: "div,ol,code,xmp"
+        });
+      });
+
+</script>
+<section class="col_main">
+<div class="col_main_int">
+  
+  <section class="col1">
+    <div class="col_content">
+      
+      <ul id="nav_anchor" class="nav_anchor" role="navigation">
+        <li class="current"><a href="#top">En-tête</a></li>
+        <li><a href="#navigation">Navigation</a></li>
+        <li><a href="#content">Content</a></li>
+        <li><a href="#link">Links</a></li>
+        <li><a href="#alert">Alerts & Messages</a></li>
+        <li><a href="#popover">Popover</a></li>
+        <li><a href="#button">Buttons</a></li>
+        <li><a href="#table">Tableaux</a></li>
+        <li><a href="#grid">Grille</a></li>
+        <li><a href="#form">Formulaire</a></li>
+        <li><a href="#block">Block</a></li>
+        <li><a href="#listes">List</a></li>
+      </ul>
+      
+      <article class="block_article">
+        <div class="block_article_content">
+          
+          <h1 id="navigation">Navigation</h1>
+          
+          <h2>Navigation breadcrumb</h2>
+          <nav class="breadcrumb" role="navigation"><a href="/">Home</a> › Article simple</nav>
+          
+          <div class="code">
+            <h3>&lt;Code&gt;</h3>
+            <xmp class="prettyprint linenums">
+              <nav class="breadcrumb" role="navigation"><a href="/">Home</a> › Article simple</nav>
+            </xmp>
+          </div>
+          
+          <div class="block_fraction block_separator">
+              <div class="one_third"> 
+                 <div class="block_content">
+                  <div class="block">
+                    <h2>Navigation commande</h2>
+                    <nav class="nav_command" role="navigation">
+                      <ul>
+                        <li class="folder"><a href="#"><span>F</span> Lien 1</a></li>
+                        <li class="email"><a href="#"><span>@</span> Lien 2</a> <span class="notification"><a href="#">+2</a></span></li>
+                        <li class="favorite"><a class="active" href="#"><span>R</span> Lien 3</a></li>
+                        <li class="history"><a href="#"><span>Z</span> Lien 4</a></li>
+                        <li class="setting"><a href="#"><span>S</span> Lien 5</a></li>
+                      </ul>
+                    </nav>
+                    <div class="code">
+                      <h3>&lt;Code&gt;</h3>
+                      <xmp class="prettyprint linenums">
+                        <nav class="nav_command" role="navigation">
+                          <ul>
+                            <li class="folder"><a href="#">Lien 1</a></li>
+                            <li class="email"><a href="#">Lien 2</a> <span class="notification"><a href="#">+2</a></span></li>
+                            <li class="favorite"><a class="active" href="#">Lien 3</a></li>
+                            <li class="history"><a href="#">Lien 4</a></li>
+                            <li class="setting"><a href="#">Lien 5</a></li>
+                          </ul>
+                        </nav>
+                      </xmp>
+                    </div>   
+                  </div><!--/block-->
+                </div><!--/block_content--> 
+              </div><!--one_third-->
+              <div class="one_third"> 
+                  <div class="block_content">
+                    <div class="block">
+                       <h2>Navigation tag</h2>
+                       <nav class="nav_tag" role="navigation">
+                         <ul>
+                           <li><a class="level3" href="#">Visualisation</a></li>
+                           <li><a class="level2" href="#">Level 2</a></li>
+                           <li><a class="level5" href="#">Open data</a></li>
+                           <li><a class="level4" href="#">Tag 4</a></li>
+                           <li><a class="level1" href="#">Level 1</a></li>
+                           <li><a class="level3" href="#">Navigation</a></li>
+                           <li><a class="level3" href="#">Level 3</a></li>
+                           <li><a class="level5" href="#">Level 5</a></li>
+                           <li><a class="level2" href="#">Intégration</a></li>
+                           <li><a class="level4" href="#">Level 4</a></li>
+                           <li><a class="level1" href="#">Base de données</a></li>
+                           <li><a class="level2" href="#">Interface</a></li>
+                           <li><a class="level5" href="#">Utilisabilité</a></li>
+                         </ul>
+                       </nav>
+                       <div class="code">
+                         <h3>&lt;Code&gt;</h3>
+                          <xmp class="prettyprint linenums">
+                           <nav class="nav_tag" role="navigation">
+                              <ul>
+                                <li><a class="level1" href="#">Visualisation</a></li>
+                                <li><a class="level2" href="#">Tag 2</a></li>
+                                <li><a class="level3" href="#">Open data</a></li>
+                                <li><a class="level4" href="#">Tag 4</a></li>
+                                <li><a class="level5" href="#">Infographie</a></li>
+                              </ul>
+                            </nav>
+                         </xmp>
+                       </div>
+                     </div><!--/block-->
+                 </div><!--/block_content--> 
+              </div><!--one_third-->
+              <div class="one_third"> 
+                <div class="block_content">
+                  <div class="block">
+                    <h2>Navigation statistiques</h2>
+                    <nav class="nav_stats_user hlist" role="navigation">
+                      <ul>
+                        <li>
+                          <a class="tooltip-bottom" title="See your friend list" href="#">
+                            <strong>184</strong>
+                            <span>friends</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="tooltip-bottom" title="See your followers list" href="#">
+                            <strong>191</strong>
+                            <span>followers</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="tooltip-bottom" title="See your group list" href="#">
+                            <strong>12</strong>
+                            <span>groups</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="tooltip-bottom" title="See your mailbox" href="#">
+                            <strong>2478</strong>
+                            <span>messages</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                    <div class="code">
+                      <h3>&lt;Code&gt;</h3>
+                      <xmp class="prettyprint linenums">
+                        <nav class="nav_stats_user hlist" role="navigation">
+                          <ul>
+                            <li>
+                              <a class="tooltip-bottom" title="See your friend list" href="#">
+                                <strong>184</strong>
+                                <span>friends</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </xmp>
+                    </div>
+                  </div><!--/block-->
+                </div><!--/block_content--> 
+              </div><!--one_third-->
+          </div><!--block_fraction-->
+          
+          <div class="block_fraction block_separator">
+             <div class="one_third"> 
+               <div class="block_content">
+                <div class="block">
+                  <h2>Navigation tabulation</h2>
+                  <nav id="nav_tabs" class="nav_tabs" role="navigation">
+                    <ul>
+                      <li><a class="selected" href="#tab1">Lien 1</a></li>
+                       <li><a href="#tab2">Lien 2</a></li>
+                       <li><a href="#tab3">Lien 3</a></li>
+                       <li><a href="#tab4">Lien 4</a></li>
+                    </ul>
+                  </nav> 
+                  <div id="tab1">
+                    <p><strong>Header tab #1</strong></p>
+                    <p>Up this much fluently</p>
+                  </div>
+                  <div id="tab2">
+                    <p><strong>Header tab #2</strong></p>
+                    <p>Jeepers far incompetently</p>
+                  </div>
+                  <div id="tab3">
+                    <p><strong>Header tab #3</strong></p>
+                    <p>Gosh hoarse mistakenly collectively</p>
+                  </div>
+                  <div id="tab4">
+                    <p><strong>Header tab #4</strong></p>
+                    <p>Wow retrospective dear lighted</p>
+                  </div>
+                  <div class="code">
+                    <h3>&lt;Code&gt;</h3>
+                    <xmp class="prettyprint linenums">
+                      <nav id="nav_tabs" class="nav_tabs" role="navigation">
+                        <ul>
+                          <li><a class="selected" href="#tab1">Lien 1</a></li>
+                           <li><a href="#tab2">Lien 2</a></li>
+                           <li><a href="#tab3">Lien 3</a></li>
+                           <li><a href="#tab4">Lien 4</a></li>
+                        </ul>
+                      </nav>
+                    </xmp>
+                  </div>
+                </div><!--/block-->
+              </div><!--/block_content--> 
+             </div><!--one_third-->
+             <div class="one_third"> 
+                <div class="block_content">
+                 <div class="block">
+                   <h2>Navigation filtre</h2>
+                   <nav id="nav_tabs_feed" class="nav_tabs feed" role="navigation">
+                     <ul>
+                       <li><a class="selected" href="#tabfeed1">Lien 1</a></li>
+                       <li><a href="#tabfeed2">Lien 2</a></li>
+                       <li><a href="#tabfeed3">Lien 3</a></li>
+                       <li><a href="#tabfeed4">Lien 4</a></li>
+                     </ul>
+                   </nav>
+                   <div id="tabfeed1">
+                     <p><strong>Header tab #1</strong></p>
+                     <p>Jeepers far incompetently</p>
+                   </div>
+                   <div id="tabfeed2">
+                     <p><strong>Header tab #2</strong></p>
+                     <p>Wow retrospective dear lighted</p>
+                   </div>
+                   <div id="tabfeed3">
+                     <p><strong>Header tab #3</strong></p>
+                     <p>Up this much fluently</p>
+                   </div>
+                   <div id="tabfeed4">
+                     <p><strong>Header tab #4</strong></p>
+                     <p>Above minute dear rat tortoise save</p>
+                   </div>
+                   <div class="code">
+                     <h3>&lt;Code&gt;</h3>
+                      <xmp class="prettyprint linenums">
+                       <nav id="nav_tabs_feed" class="nav_tabs feed" role="navigation">
+                          <ul>
+                            <li><a class="selected" href="#tabfeed1">Lien 1</a></li>
+                            <li><a href="#tabfeed2">Lien 2</a></li>
+                            <li><a href="#tabfeed3">Lien 3</a></li>
+                            <li><a href="#tabfeed4">Lien 4</a></li>
+                          </ul>
+                        </nav>
+                     </xmp>
+                   </div>
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+             </div><!--one_third-->
+             <div class="one_third">
+               <div class="block_content">
+                 <div class="block">
+                   <h2>Navigation publisher</h2>
+                   <nav class="nav_tabs publisher" role="navigation">
+                     <ul>
+                       <li class="update"><a class="tooltip-top" href="#" title="Status">U</a></li>
+                       <li class="permalink"><a class="tooltip-top" href="#" title="Link">K</a></li>
+                       <li class="post"><a class="tooltip-top" href="#" title="Post">D</a></li>
+                       <li class="photo"><a class="tooltip-top" href="#" title="Image">I</a></li>
+                       <li class="video"><a class="tooltip-top" href="#" title="Video">M</a></li>
+                     </ul>
+                   </nav>
+                   <div class="code">
+                     <h3>&lt;Code&gt;</h3>
+                     <xmp class="prettyprint linenums">
+                       <nav class="nav_tabs publisher" role="navigation">
+                         <ul>
+                           <li class="update"><a class="tooltip-top" href="#" title="Status">Status</a></li>
+                           <li class="permalink"><a class="tooltip-top" href="#" title="Link">Link</a></li>
+                           <li class="post"><a class="tooltip-top" href="#" title="Post">Billet</a></li>
+                           <li class="photo"><a class="tooltip-top" href="#" title="Image">Image</a></li>
+                           <li class="video"><a class="tooltip-top" href="#" title="Video">Vidéo</a></li>
+                         </ul>
+                       </nav>
+                     </xmp>
+                   </div>
+                 </div><!--/block-->
+               </div><!--/block_content-->
+             </div><!--one_third-->
+          </div><!--block_fraction-->
+          
+          <div class="block_fraction block_separator">
+             <div class="one_third"> 
+                <div class="block_content">
+                 <div class="block">
+                   <h2>Navigation list as a select</h2>
+                   <dl class="nav_select">
+                      <dt><a href="#"><span>Select the country</span></a></dt>
+                       <dd>
+                         <ul>
+                             <li><a href="#">Brazil</a></li>
+                             <li><a href="#">France</a></li>
+                             <li><a href="#">Germany</a></li>
+                             <li><a href="#">India</a></li>
+                         </ul>
+                       </dd>
+                     </dl>
+                     <p>Oh browbeat oriole next athletically angelfish far forlorn and reindeer added giggled unthinkingly more within whimpered added revealed apart more next a hence cavalier some some lax violently like this that dear as wayward after trod squirrel.</p>
+                     <div class="code">
+                       <h3>&lt;Code&gt;</h3>
+                       <xmp class="prettyprint linenums">
+                         <dl class="nav_select">
+                            <dt><a href="#"><span>Select the country</span></a></dt>
+                            <dd>
+                              <ul>
+                                  <li><a href="#">Brazil</a></li>
+                                  <li><a href="#">France</a></li>
+                                  <li><a href="#">Germany</a></li>
+                                  <li><a href="#">India</a></li>
+                              </ul>
+                            </dd>
+                          </dl>
+                       </xmp>
+                     </div>
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+             </div><!--one_third-->
+             <div class="one_third"> 
+              <div class="block_content">
+                <div class="block">
+                  <h2>Navigation pretty select</h2>
+                  <div id="js-select-replace">
+                    <form action="" method="get" accept-charset="utf-8">
+                    <select>
+                        <option value="0" selected="selected">Select the country</option>
+                        <option value="BR">Brasil</option>
+                        <option value="FR">France</option>
+                        <option value="DE">Germany</option>
+                        <option value="IN">India</option>
+                     </select>
+                     <p><input type="submit" value="Continue &rarr;"></p>
+                   </form>
+                   </div><!--js-select-replace-->
+                   <p>Much toucan much fidgeted and until rid hello thrust less goodness cobra cardinal deliberate a witlessly thoroughly and without ouch this lopsided mild goodness much jeepers porpoise some lax violently some lax violently.</p>
+                   <div class="code">
+                     <h3>&lt;Code&gt;</h3>
+                     <xmp class="prettyprint linenums">
+                       <div id="js-select-replace">
+                         <form action="model_layout_submit" method="get" accept-charset="utf-8">
+                         <select>
+                             <option value="0" selected="selected">Select the country</option>
+                             <option value="BR">Brasil</option>
+                             <option value="FR">France</option>
+                             <option value="DE">Germany</option>
+                             <option value="IN">India</option>
+                          </select>
+                          <p><input type="submit" value="Continue &rarr;"></p>
+                        </form>
+                        </div><!--js-select-replace-->
+                     </xmp>
+                   </div>
+                </div><!--/block-->
+              </div><!--/block_content--> 
+             </div><!--one_third-->
+             <div class="one_third"> 
+                <div class="block_content">
+                 <div class="block">
+                   <h2>Navigation édition</h2>
+                    <nav class="nav_edit" role="navigation">
+                      <ul>
+                        <li><span class="action"><a href="#">Lien 1</a></span></li>
+                        <li><span class="action"><a href="#">Lien 2</a></span></li>
+                        <li><span class="action"><a class="active" href="#">Lien 3</a></span></li>
+                        <li><span class="action"><a href="#">Lien 4</a></span></li>
+                      </ul>
+                    </nav>
+                    <div class="code">
+                      <h3>&lt;Code&gt;</h3>
+                      <xmp class="prettyprint linenums">
+                        <nav class="nav_edit" role="navigation">
+                         <ul>
+                           <li><span class="action"><a href="#">Lien 1</a></span></li>
+                           <li><span class="action"><a href="#">Lien 2</a></span></li>
+                           <li><span class="action"><a class="active" href="#">Lien 3</a></span></li>
+                           <li><span class="action"><a href="#">Lien 4</a></span></li>
+                         </ul>
+                       </nav>
+                      </xmp>
+                    </div>
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+              </div><!--one_third-->
+          </div><!--block_fraction-->
+          
+          <h2>Navigation pagination</h2>
+          <nav class="nav_pagination" role="navigation">
+            <ul>
+                <li class="pager-first first"><a title="Aller à la première page" href="#">«&nbsp;</a></li>
+                <li class="pager-previous"><a title="Aller à la page précédente" href="#">‹&nbsp;</a></li>
+                <li class="pager-item"><a title="Aller à la page 1" href="#">1</a></li>
+                <li class="pager-item"><a title="Aller à la page 2" href="#">2</a></li>
+                <li class="pager-item"><a title="Aller à la page 3" href="#">3</a></li>
+                <li><strong>4</strong></li>
+                <li class="pager-item"><a title="Aller à la page 5" href="#">5</a></li>
+                <li class="pager-item"><a title="Aller à la page 6" href="#">6</a></li>
+                <li class="pager-next"><a title="Aller à la page suivante" href="#">›</a></li>
+                <li class="pager-last last"><a title="Aller à la dernière page" href="#">»</a></li>
+            </ul>
+          </nav>
+          
+          <div class="code">
+            <h3>&lt;Code&gt;</h3>
+            <xmp class="prettyprint linenums">
+              <nav class="nav_pagination" role="navigation">
+                <ul>
+                    <li class="pager-first first"><a title="Aller à la première page" href="#">«&nbsp;</a></li>
+                    <li class="pager-previous"><a title="Aller à la page précédente" href="#">‹&nbsp;</a></li>
+                    <li class="pager-item"><a title="Aller à la page 1" href="#">1</a></li>
+                    <li class="pager-item"><a title="Aller à la page 2" href="#">2</a></li>
+                    <li class="pager-item"><a title="Aller à la page 3" href="#">3</a></li>
+                    <li><strong>4</strong></li>
+                    <li class="pager-item"><a title="Aller à la page 5" href="#">5</a></li>
+                    <li class="pager-item"><a title="Aller à la page 6" href="#">6</a></li>
+                    <li class="pager-next"><a title="Aller à la page suivante" href="#">›</a></li>
+                    <li class="pager-last last"><a title="Aller à la dernière page" href="#">»</a></li>
+                </ul>
+              </nav>
+            </xmp>
+          </div>
+          
+          <h2>Navigation post</h2>
+          <nav class="nav_post" role="navigation">
+            <ul>
+                <li class="pager-previous">
+                  <a href="#">‹ Billet précédent</a>
+                  <div class="pager_content">
+                    <p class="date">le 22/03/2011</p>
+                    <p class="pager_title">Titre du billet</p>
+                  </div>
+                </li>
+                <li class="pager-next">
+                  <a href="#">Billet suivant ›</a>
+                  <div class="pager_content"> 
+                    <p class="date">le 02/09/2011</p>
+                    <p class="pager_title">Titre du billet</p>
+                  </div>
+                </li>
+            </ul>
+          </nav>
+          
+          <div class="code">
+            <h3>&lt;Code&gt;</h3>
+            <xmp class="prettyprint linenums">
+              <nav class="nav_post" role="navigation">
+                <ul>
+                    <li class="pager-previous">
+                      <a href="#">‹ Billet précédent</a>
+                      <div class="pager_content">
+                        <p class="date">le 22/03/2011</p>
+                        <p class="pager_title">Titre du billet</p>
+                      </div>
+                    </li>
+                    <li class="pager-next">
+                      <a href="#">Billet suivant ›</a>
+                      <div class="pager_content"> 
+                        <p class="date">le 02/09/2011</p>
+                        <p class="pager_title">Titre du billet</p>
+                      </div>
+                    </li>
+                </ul>
+              </nav>
+            </xmp>
+          </div>
+          
+          <nav class="nav_step" role="navigation">
+            <h2>Navigation étape</h2>
+            <ol>
+              <li><a href="#">Lien 1</a></li>
+              <li><a href="#">Lien 2</a></li>
+              <li><span class="active">Lien 3</span></li>
+              <li><span>Lien 4</span></li>
+              <li><span>Lien 5</span></li>
+            </ol>
+          </nav>
+          
+          <div class="code">
+            <h3>&lt;Code&gt;</h3>
+            <xmp class="prettyprint linenums">
+              <nav class="nav_step" role="navigation">
+                <ol>
+                  <li><a href="#">Lien 1</a></li>
+                  <li><a href="#">Lien 2</a></li>
+                  <li><span class="active">Lien 3</span></li>
+                  <li><span>Lien 4</span></li>
+                  <li><span>Lien 5</span></li>
+                </ol>
+              </nav>
+            </xmp>
+          </div>
+          
+        </div><!--/block_article_content-->
+      </article><!--/block_article--> 
+      
+      <h1 id="content">Content</h1>
+      
+      <article class="block_article">
+        <div class="block_article_content">
+          
+          <h2>Header 2</h2>
+          
+          <p><strong>Up this much fluently gulped goodness far oh beside underneath excepting yikes dizzy much well when adequate circa impalpable this lizard gamely purred much since swore however and confessed returned rabbit jay contrary zebra far until that instead well so and funny overran flagrantly mockingly alas much yikes examined this and abnormally when showed across less dear besides sparingly.</strong></p>
+          
+          <h2>Header 2</h2>
+          
+          <h3>Header 3</h3>
+          
+          <p><strong>Kookaburra arguably more quetzal the rang jeepers far incompetently this dimly lemming that one more far this opposite gazed less jeez.</strong></p>
+          
+          <p>Wow retrospective dear lighted fragrant <a href="http://www.lanetscouade.com">therefore</a> breathlessly octopus man-of-war hey blatantly goodness less untiringly happily oh dazedly vulture much bent trim supply in a and much. Stank alas hooted since turned gosh hello ubiquitously before opposite hence along cuckoo balked precisely unwound lost a tangibly much distantly radiantly</p>
+          
+          <p>That instead well so and funny overran flagrantly mockingly alas much yikes examined this and abnormally when showed across less dear besides sparingly. Unwound lost a tangibly much distantly radiantly.</p>
+          
+          <h4>Header 4</h4>
+          
+          <p>Gosh hoarse mistakenly collectively the stank chastely and stank alas hooted since turned gosh hello ubiquitously before opposite hence along cuckoo balked precisely unwound lost a tangibly much distantly radiantly.</p>
+          
+          
+          <div class="block_fraction">
+            <div class="one_quarter"> 
+             <div class="block_content">
+              <div class="block">
+                <h4>Unordered list <code>&lt;ul&gt;</code></h4>
+                <ul>
+                  <li>Vestibulum laoreet porttitor sem</li>
+                   <li>Ac tristique libero volutpat at
+                     <ul>
+                       <li>Lorem ipsum dolor sit amet</li>
+                       <li>Consectetur adipiscing elit</li>
+                       <li>Integer molestie lorem at massa</li>
+                     </ul>
+                   </li>
+                   <li>Aenean sit amet erat nunc</li>
+                   <li>Eget porttitor lorem</li>
+                </ul> 
+              </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_quarter-->
+            <div class="one_quarter"> 
+              <div class="block_content">
+               <div class="block">
+                 <h4>Ordered list <code>&lt;ol&gt;</code></h4>
+                 <ol>
+                   <li>Vestibulum laoreet porttitor sem</li>
+                   <li>Ac tristique libero volutpat at
+                     <ol>
+                       <li>Lorem ipsum dolor sit amet</li>
+                       <li>Consectetur adipiscing elit</li>
+                       <li>Integer molestie lorem at massa</li>
+                     </ol>
+                   </li>
+                   <li>Aenean sit amet erat nunc</li>
+                   <li>Eget porttitor lorem</li>
+                 </ol>
+               </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_quarter-->
+            <div class="one_quarter"> 
+              <div class="block_content">
+                <div class="block vlist">
+                  <h4>Unstyled <code>&lt;vlist&gt;</code></h4>
+                  <ul>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Consectetur adipiscing elit</li>
+                    <li>Nulla volutpat aliquam velit
+                      <ul>
+                        <li>Phasellus iaculis neque</li>
+                        <li>Purus sodales ultricies</li>
+                        <li>Vestibulum laoreet porttitor sem</li>
+                      </ul>
+                    </li>
+                    <li>Faucibus porta lacus fringilla vel</li>
+                    <li>Aenean sit amet erat nunc</li>
+                    <li>Eget porttitor lorem</li>
+                  </ul>
+                </div><!--/block-->
+              </div><!--/block_content--> 
+            </div><!--one_quarter-->
+            <div class="one_quarter"> 
+              <div class="block_content">
+                 <div class="block">
+                   <h4>Description <code>&lt;dl&gt;</code></h4>
+                    <dl>
+                     <dt>Description lists</dt>
+                     <dd>A description list is perfect for defining terms.</dd>
+                     <dt>Euismod</dt>
+
+                     <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                     <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+                     <dt>Malesuada porta</dt>
+                     <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+                   </dl>
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--one_quarter-->
+          </div><!--block_fraction-->
+          
+          <h2>Text elements</h2>
+          <p>
+    					This is <abbr title="title">abbreviation</abbr> <code>&lt;abbr&gt;</code><br />
+    					This is <strong>strong</strong> <code>&lt;strong&gt;</code><br />
+    					This is <em>emphasis</em> <code>&lt;em&gt;</code><br />
+    					This is <b>bold text</b> <code>&lt;b&gt;</code><br />
+    					This is <i>italic text</i> <code>&lt;i&gt;</code><br />
+    					This is <cite>cite</cite> <code>&lt;cite&gt;</code><br />
+    					This is <small>small text</small> <code>&lt;small&gt;</code><br />
+    					This is <del>deleted text</del> <code>&lt;del&gt;</code><br />
+    					This is <ins>inserted text</ins> <code>&lt;ins&gt;</code><br />
+    					This is <dfn>defining instance</dfn> <code>&lt;dfn&gt;</code><br />
+    					This is <kbd>user input</kbd> <code>&lt;kbd&gt;</code><br />
+    					This is <samp>sample output</samp> <code>&lt;samp&gt;</code><br />
+    					This is <q>inline quotation</q> <code>&lt;q&gt;</code><br />
+    					These are <sub>subscript</sub>  <code>&lt;sub&gt;</code> & <sup>superscript</sup><code>&lt;sup&gt;</code><br />
+    					This is <var>a variable</var>  <code>&lt;var&gt;</code>
+    			</p>
+    			
+    			<h3>Blockquote <code>&lt;blockquote&gt;</code></h3>
+    			<blockquote>
+            <p>Up this much fluently gulped goodness far oh beside underneath excepting yikes dizzy much well when adequate circa impalpable this lizard gamely purred much since swore however and confessed returned rabbit jay contrary zebra far until that instead well so and funny overran flagrantly mockingly alas much yikes examined this and abnormally when showed across less dear besides sparingly.</p>
+            <small>Dr. Julius Hibbert</small>
+          </blockquote>
+          
+          <h2 class="strike"><span>Header 2 (strike)</span></h2>
+          
+          <p>Up this much fluently gulped goodness far oh beside underneath excepting yikes dizzy much well when adequate circa impalpable this lizard gamely purred much since swore however and confessed returned rabbit jay contrary zebra far until that instead well so and funny overran flagrantly mockingly alas much yikes examined this and abnormally when showed across less dear besides sparingly.</p>
+          
+          <p>Gosh hoarse mistakenly collectively the stank chastely and stank alas hooted since turned gosh hello ubiquitously before opposite hence along cuckoo balked precisely unwound lost a tangibly much distantly radiantly.</p>
+          
+        </div><!--/block_article_content-->
+      </article><!--/block_article-->  
+
+      <h1 id="link">Links</h1>
+      <article class="block_article">
+        <div class="block_article_content">    
+          
+          <h2>Link external</h2>
+          <ul>
+            <li><a href="http://www.lanetscouade.com">lien externe</a></li>
+            <li><a href="file.doc">file (4ko - doc)</a></li>
+            <li><a href="file.docx">file (4ko - docx)</a></li>
+            <li><a href="file.xls">file (4ko - xls)</a></li>
+            <li><a href="file.xlsx">file (4ko - xlsx)</a></li>
+            <li><a href="file.ppt">file (4ko - ppt)</a></li>
+            <li><a href="file.pptx">file (4ko - pptx)</a></li>
+            <li><a href="file.pdf">file (4ko - pdf)</a></li>
+            <li><a href="file.gif">file (4ko - gif)</a></li>
+            <li><a href="file.jpg">file (4ko - jpg)</a></li>
+            <li><a href="file.png">file (4ko - png)</a></li>
+            <li><a href="file.ai">file (4ko - ai)</a></li>
+            <li><a href="file.eps">file (4ko - eps)</a></li>
+            <li><a href="file.zip">file (4ko - zip)</a></li>
+            <li><a href="file.swf">file (4ko - swf)</a></li>
+            <li><a href="file.bmp">file (4ko - bmp)</a></li>
+            <li><a href="file.qxd">file (4ko - qxd)</a></li>
+            <li><a href="file.indd">file (4ko - indd)</a></li>
+          </ul>
+          
+          <h2>Metadata</h2>
+          
+          <h3>Tag & category</h3>
+          <ul>
+            <li><strong>Tag :</strong> <span class="tag"><a href="#">story</a></span></li>
+            <li><strong>Category :</strong> <span class="category"><a href="#">corporation</a></span></li>
+            <li><strong>Source :</strong> <span class="source"><a href="#">lanetscouade</a></span></li>
+          </ul>
+          
+          <h3>Time</h3>
+          <ul>
+            <li><strong>Hour :</strong> <data datetime="2009-02-17T05:00-07:00" class="hour"><a href="#">07:00</a></data></li>
+            <li><strong>Day :</strong> <data datetime="2009-02-17T05:00-07:00" class="day"><a href="#">19</a></data></li>
+            <li><strong>Month :</strong> <data datetime="2009-02-17T05:00-07:00" class="month"><a href="#">february</a></data></li>
+            <li><strong>Year :</strong> <data datetime="2009-02-17T05:00-07:00" class="year"><a href="#">2009</a></data></li>
+            <li><strong>Date :</strong> <data datetime="2009-02-17T05:00-07:00" class="date"><a href="#">19 february 2009</a></data></li>
+          </ul>
+          
+          <h3>Microdata Event</h3>
+          <div class="hcalendar" itemscope itemtype="http://microformats.org/profile/hcalendar#vevent">
+            <dl>
+              <dt>Class :</dt>
+              <dd><span itemprop="class" class="class">public / private / confidential</span></dd>
+              <dt>Summary :</dt>
+              <dd><span itemprop="summary">Agency anniversary</span></dd>
+              <dt>Date :</dt>
+              <dd>
+                <data itemprop="dtstart" datetime="2009-05-05T19:00:00Z" class="date">friday May 5th @ 7pm</data> to
+                <data itemprop="dtend" datetime="2009-05-05T21:00:00Z" class="date">9pm</data>
+              </dd>
+              <dt>Duration :</dt>
+              <dd><span itemprop="duration" class="duration">1 night</span></dd>
+              <dt>Location :</dt>
+              <dd><span itemprop="location" class="location">The Agency</span></dd>
+              <dt>Status :</dt>
+              <dd><span itemprop="status" class="status">Tentative / confirmed / cancelled</span></dd>
+              <dt>Resources :</dt>
+              <dd><span itemprop="resources" class="resources">Brown t-shirt</span></dd>
+              <dt>Contact :</dt>
+              <dd><span itemprop="contact" class="contact">Jane Bullet</span></dd>
+              <dt>URL :</dt>
+              <dd><a href="http://livebrum.co.uk/2009/05/05/bluesday-tuesday-money-road" rel="bookmark" itemprop="url" class="url">http://www.lanetscouade.com</a></dd>
+              <dt>Last modified :</dt>
+              <dd><span itemprop="last-modified ">12 septembre 2011</span></dd>
+            </dl>
+          </div>
+          
+          <h3>Microdata Address</h3>
+          <div class="hcard" itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
+            <dl>
+              <dt>Name :</dt>
+              <dd>
+                <span itemprop="fn">
+                  <span itemprop="n" itemscope>
+                    <strong>Given name :</strong> <span itemprop="given-name" class="name"><a href="#">Jean Pierre</a></span> -
+                    <strong>Family name :</strong> <span itemprop="family-name" class="name"><a href="#">Duchemain</a></span>
+                  </span>
+                </span>
+              </dd>
+              <dt>Birthday :</dt>
+              <dd><data itemprop="bday" datetime="10975-04-05T19:00:00Z" class="date">18 april 1975</data></dd>
+              <dt>Organisation :</dt>
+              <dd>
+                <span itemprop="org" class="organisation">
+                  <strong>Organisation name :</strong> <span itemprop="organization-name" class="organization_name"><a href="#">La Netscouade</a></span> -
+                  <strong>Organisation unit :</strong> <span itemprop="organization-unit" class="organization_unit"><a href="#">La Rédaction</a></span>
+                </span>
+              </dd>
+              <dt>Title :</dt>
+              <dd><span itemprop="title" class="title"><a href="#">Writer senior</a></span></dd>
+              <dt>Role :</dt>
+              <dd><span itemprop="role" class="role"><a href="#">Grand chief of everything</a></span></dd>
+              <dt>Address :</dt>
+              <dd>
+                <span itemprop="adr" class="address">
+                  <strong>Street-address :</strong> <span itemprop="street-address" class="streetaddress"><a href="#">8 passage Brûlon</a></span> -
+                  <strong>Locality :</strong> <span itemprop="locality" class="locality"><a href="#">Paris</a></span> -
+                  <strong>Region :</strong> <span class="region"><a href="#">Ile de France</a></span> -
+                  <strong>Postal code :</strong> <span itemprop="postal-code" class="postalcode"><a href="#">75012</a></span> -
+                  <strong>Country name :</strong> <span itemprop="country-name" class="countryname"><a href="#">France</a></span>
+                </span><br />
+                <span itemprop="geo" class="geo" itemscope itemtype="http://data-vocabulary.org/Geo">
+                    <meta itemprop="latitude" content="37.4149" />
+                    <meta itemprop="longitude" content="-122.078" />
+                  </span>
+              </dd>
+              <dt>Telephone :</dt>
+              <dd>
+                <span itemprop="tel" itemscope class="telephone">
+                  <span itemprop="value" class="telephone_number"><a href="#">+1 (310) 555 3781</a></span> /
+                  <span class="telephone_type"><meta itemprop="type" content="work">agency phone</span> -
+                  <span itemprop="value" class="telephone_number"><a href="#">+1 (310) 786 4621</a></span> /
+                  <span class="telephone_type"><meta itemprop="type" content="home">home phone</span> -
+                  <span itemprop="value" class="telephone_number"><a href="#">+1 (310) 555 3782</a></span> /
+                  <span class="telephone_type"><meta itemprop="type" content="cell">mobile phone</span> -
+                  <span itemprop="value" class="telephone_number"><a href="#">+1 (310) 555 3784</a></span> /
+                  <span class="telephone_type"><meta itemprop="type" content="fax">fax</span> -
+                  <span itemprop="value" class="telephone_number"><a href="#">+1 (310) 555 3785</a></span> /
+                  <span class="telephone_type"><meta itemprop="type" content="video">video conference</span>
+                </span>
+              </dd>
+              <dt>Email :</dt>
+              <dd><span itemprop="email" class="email"><a href="mailto:duchemain@lanetscouade.com">jean-pierre.duchemain.lanetscouade.com</a></span></dd>
+              <dt>URL :</dt>
+              <dd><span itemprop="URL" class="url"><a href="#">http://www.lanetscouade.com</a></span></dd>
+            </dl>
+          </div>
+            
+        </div><!--/block_article_content-->
+      </article><!--/block_article-->
+      
+      <h1 id="alert">Alerts & Messages</h1>
+      
+      <article class="block_article">
+        <div class="block_article_content">
+          
+          <h2>Alerts</h2>
+          
+          <div class="alert info">
+            <a class="close" href="#">×</a>
+            <p><strong>Info</strong> <code>.info</code> This is an alert that needs your attention, but it’s not a huge priority just yet.</p>
+          </div>
+          
+          <div class="code">
+            <h3>&lt;Code&gt;</h3>
+            <xmp class="prettyprint linenums">
+              <div class="alert info">
+                <a class="close" href="#">×</a>
+                <p><strong>Info</strong> This is an alert that needs your attention, but it’s not a huge priority just yet.</p>
+              </div>
+            </xmp>
+          </div>
+          
+          <div class="alert notice">
+            <a class="close" href="#">×</a>
+            <p><strong>Notice</strong> <code>.notice</code> Best check yo self, you’re not looking too good.</p>
+          </div>
+          
+          <div class="alert warning">
+            <a class="close" href="#">×</a>
+            <p><strong>Warning</strong> <code>.warning</code> Best check yo self, you’re not looking too good.</p>
+          </div>
+          
+          <div class="alert error">
+            <a class="close" href="#">×</a>
+            <p><strong>Error</strong> <code>.error</code> Change this and that and try again.</p>
+          </div>
+          
+          <div class="alert success">
+            <a class="close" href="#">×</a>
+            <p><strong>Success</strong> <code>.success</code> You successfully read this alert message.</p>
+          </div>
+          
+          <h2>Messages</h2>
+          
+          <div class="message info">
+            <h2>Info</h2>
+            <p><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</strong></p>
+  				  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="#">Nullam malesuada</a> suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit amet, sollicitudin sed, aliquet   vel, quam. Pellentesque molestie laoreet tortor. Aenean quam. Pellentesque magna   metus, venenatis sit amet, congue nec, dictum in, est. Aliquam nibh.</p>
+  				  <ul>
+  					  <li>Item 1</li>
+  					  <li>Item 2</li>
+  					  <li>Item 2</li>
+  				  </ul>
+  				</div>
+          <div class="message notice">
+            <h2>Notice</h2>
+  				  <p><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</strong></p>
+  				  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="#">Nullam malesuada</a> suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit amet, sollicitudin sed, aliquet   vel, quam. Pellentesque molestie laoreet tortor. Aenean quam. Pellentesque magna   metus, venenatis sit amet, congue nec, dictum in, est. Aliquam nibh.</p>
+  				  <ul>
+  					  <li>Item 1</li>
+  					  <li>Item 2</li>
+  					  <li>Item 2</li>
+  				  </ul>
+  				</div>
+  				<div class="message warning">
+            <h2>Warning</h2>
+  				  <p><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</strong></p>
+  				  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="#">Nullam malesuada</a> suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit amet, sollicitudin sed, aliquet   vel, quam. Pellentesque molestie laoreet tortor. Aenean quam. Pellentesque magna   metus, venenatis sit amet, congue nec, dictum in, est. Aliquam nibh.</p>
+  				  <ul>
+  					  <li>Item 1</li>
+  					  <li>Item 2</li>
+  					  <li>Item 2</li>
+  				  </ul>
+  				</div>
+          <div class="message error">
+            <h2>Error</h2>
+  				  <p><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</strong></p>
+    				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="#">Nullam malesuada</a> suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit amet, sollicitudin sed, aliquet   vel, quam. Pellentesque molestie laoreet tortor. Aenean quam. Pellentesque magna   metus, venenatis sit amet, congue nec, dictum in, est. Aliquam nibh.</p>
+    				<ul>
+    					<li>Item 1</li>
+    					<li>Item 2</li>
+    					<li>Item 2</li>
+    				</ul>
+  				</div>
+  			  <div class="message success">
+  			    <h2>Success</h2>
+  				  <p><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</strong></p>
+    				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="#">Nullam malesuada</a> suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit amet, sollicitudin sed, aliquet   vel, quam. Pellentesque molestie laoreet tortor. Aenean quam. Pellentesque magna   metus, venenatis sit amet, congue nec, dictum in, est. Aliquam nibh.</p>
+    				<ul>
+    					<li>Item 1</li>
+    					<li>Item 2</li>
+    					<li>Item 2</li>
+    				</ul>
+  				</div>
+          
+        </div><!--/block_article_content-->
+      </article><!--/block_article-->
+      
+      <h1 id="popover">Popover</h1>
+      
+      <article class="block_article">
+        <div class="block_article_content">
+          
+          <h2>Tooltip</h2>
+          
+          <div class="notice" style="position:relative;padding:1.5em 1.5em 1.5em 6em;">
+            <div style="max-width:200px;display:block;top:-12px;left:7.6em;" class="tiptip_holder tip_top">
+              <div class="tiptip_arrow" style="margin-left:40%;bottom:-6px;">
+                <div class="tiptip_arrow_inner"></div>
+              </div>
+              <div class="tiptip_content">Tooltip Top</div>
+            </div>
+            <div style="max-width:200px;display:block;top:2.7em;left:15em;" class="tiptip_holder tip_right">
+              <div class="tiptip_arrow" style="margin-left:-12px;margin-top:7px;">
+                <div class="tiptip_arrow_inner"></div>
+              </div>
+              <div class="tiptip_content">Tooltip Right</div>
+            </div>
+            <div style="max-width:200px;display:block;top:7.5em;left:7.6em;" class="tiptip_holder tip_bottom">
+              <div class="tiptip_arrow" style="margin-left:45%;margin-top:-12px;">
+                <div class="tiptip_arrow_inner"></div>
+              </div>
+              <div class="tiptip_content">Tooltip Bottom</div>
+            </div>
+            <div style="max-width:200px;display:block;top:4.3em;left:.6em;" class="tiptip_holder tip_left">
+              <div class="tiptip_arrow" style="right:-7px;margin-top:7px;">
+                <div class="tiptip_arrow_inner"></div>
+              </div>
+              <div class="tiptip_content">Tooltip left</div>
+            </div>
+            
+            <ul>
+              <li>Tooltip top</li>
+              <li>Tooltip right</li>
+              <li>Tooltip left</li>
+              <li>Tooltip bottom</li>
+            </ul> 
+          
+          </div><!--/notice-->
+          
+          <h2>Modal box</h2>
+            
+          <div class="notice pattern">
+            <div id="fancybox-tmp" style="padding:15em;"></div>
+             <div id="fancybox-loading"><div></div></div>
+             <div style="background-color: rgb(119, 119, 119); opacity: 0.7; cursor: pointer; height: 2006px;" id="fancybox-overlay"></div>
+             <div style="display:block;width:60%;height:160px;top:5%;left:17%;" id="fancybox-wrap">
+               <div id="fancybox-outer">
+                 <div class="fancybox-bg" id="fancybox-bg-n"></div>
+                 <div class="fancybox-bg" id="fancybox-bg-ne"></div>
+                 <div class="fancybox-bg" id="fancybox-bg-e"></div>
+                 <div class="fancybox-bg" id="fancybox-bg-se"></div>
+                 <div class="fancybox-bg" id="fancybox-bg-s"></div>
+                 <div class="fancybox-bg" id="fancybox-bg-sw"></div>
+                 <div class="fancybox-bg" id="fancybox-bg-w"></div>
+                 <div class="fancybox-bg" id="fancybox-bg-nw"></div>
+                 <div style="display:block;border-width:10px;width:96%;height:140px;" id="fancybox-content">
+                   <h2>Modal FancyBox for iframe pages</h2>
+                    <p>Ardently some crud and next pointed despite hence far since truthfully. less while woodpeckerUp this much fluently gulped goodness far oh beside underneath excepting yikes dizzy much</p>
+                 </div><!--/fancybox-content-->
+                 <a id="fancybox-close" style="display:block;"></a>
+                 <div class="" id="fancybox-title"></div>
+                 <a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a>
+                 <a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a>
+             </div><!--/fancybox-outer-->
+            </div><!--/fancybox-wrap-->
+          </div><!--/notice-->
+          
+          <div class="notice pattern">
+            <div class="reveal-modal notice" style="display:block;width:50%;top:5%;opacity:1;visibility:visible;">
+               <h2>Reveal for alerts & messages</h2>
+               <p>Ardently some crud and next pointed despite hence far since truthfully. less while woodpeckerUp this much fluently gulped goodness far oh beside underneath excepting yikes dizzy much</p>
+               <a class="close-reveal-modal">&#215;</a>
+            </div>
+          </div><!--/notice-->
+          
+        </div><!--/block_article_content-->
+      </article><!--/block_article-->
+      
+      <h1 id="button">Buttons</h1>
+      
+      <article class="block_article">
+        <div class="block_article_content">
+          <div class="block_fraction">
+            <div class="one_quarter"> 
+               <div class="block_content">
+                <div class="block">
+                  <h4>Buttons</h4>
+                  <p class="delete"><a href="#">Delete</a></p>
+                  <p class="cancel"><a href="#">Cancel</a></p>
+                  <p class="select"><a href="#">Select</a></p>
+                  <p class="action"><a href="#">Action</a></p>
+                  <p class="access"><a href="#">Access</a></p>
+                  <p class="danger"><a href="#">Danger</a></p>
+                  <p class="submit"><a href="#">Submit</a></p>
+                  <p class="more"><a href="#" class="tooltip" title="Voir plus d'information sur cet article">More</a></p>
+                  <hr />
+                  <p><strong>Lien :</strong> <a class="linklink" href="#">Exemple de lien non visité</a></p>
+                </div><!--/block-->
+              </div><!--/block_content--> 
+             </div><!--one_quarter-->
+             <div class="one_quarter"> 
+               <div class="block_content">
+                 <div class="block">
+                   <h4>Over <code>.hover</code></h4>
+                   <p class="delete"><a class="hover" href="#">Delete</a></p>
+                   <p class="cancel"><a class="hover" href="#">Cancel</a></p>
+                   <p class="select"><a class="hover" href="#">Select</a></p>
+                   <p class="action"><a class="hover" href="#">Action</a></p>
+                   <p class="access"><a class="hover" href="#">Access</a></p>
+                   <p class="danger"><a class="hover" href="#">Danger</a></p>
+                   <p class="submit"><a class="hover" href="#">Submit</a></p>
+                   <p class="more"><a href="#" class="hover tooltip" title="Voir plus d'information sur cet article">More</a></p>
+                   <hr />
+                   <p><strong>Lien :</strong> <a class="linkhover" href="#">Exemple de lien over</a></p>
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+             </div><!--one_quarter-->
+             <div class="one_quarter"> 
+               <div class="block_content">
+                  <div class="block">
+                    <h4>Active <code>.active</code></h4>
+                    <p class="delete"><a class="active" href="#">Delete</a></p>
+                    <p class="cancel"><a class="active" href="#">Cancel</a></p>
+                    <p class="select"><a class="active" href="#">Select</a></p>
+                    <p class="action"><a class="active" href="#">Action</a></p>
+                    <p class="access"><a class="active" href="#">Access</a></p>
+                    <p class="danger"><a class="active" href="#">Danger</a></p>
+                    <p class="submit"><a class="active" href="#">Submit</a></p>
+                    <p class="more"><a href="#" class="active tooltip" title="Voir plus d'information sur cet article">More</a></p>
+                    <hr />
+                    <p><strong>Lien :</strong> <a class="linkactive" href="#">Exemple de lien actif</a></p>
+                  </div><!--/block-->
+                </div><!--/block_content--> 
+              </div><!--one_quarter-->
+              <div class="one_quarter"> 
+                <div class="block_content">
+                  <div class="block">
+                    <h4>Checked <code>.checked</code></h4>
+                    <p class="delete"><a class="checked" href="#">Delete</a></p>
+                    <p class="cancel"><a class="checked" href="#">Cancel</a></p>
+                    <p class="select"><a class="checked" href="#">Select</a></p>
+                    <p class="action"><a class="checked" href="#">Action</a></p>
+                    <p class="access"><a class="checked" href="#">Access</a></p>
+                    <p class="danger"><a class="checked" href="#">Danger</a></p>
+                    <p class="submit"><a class="checked" href="#">Submit</a></p>
+                    <p class="more"><a href="#" class="checked tooltip" title="Voir plus d'information sur cet article">More</a></p>
+                    <hr />
+                    <p><strong>Lien :</strong> <a class="linkvisited" href="#">Exemple de lien visité</a></p>
+                  </div><!--/block-->
+                </div><!--/block_content--> 
+              </div><!--one_quarter-->
+          </div><!--block_fraction-->
+          
+          <div class="code">
+            <h3>&lt;Code&gt;</h3>
+            <xmp class="prettyprint linenums">
+               <p class="delete"><a href="#">Delete</a></p>
+               <p class="cancel"><a href="#">Cancel</a></p>
+               <p class="select"><a href="#">Select</a></p>
+               <p class="action"><a href="#">Action</a></p>
+               <p class="access"><a href="#">Access</a></p>
+               <p class="danger"><a href="#">Danger</a></p>
+               <p class="submit"><a href="#">Submit</a></p>
+               <p class="more"><a href="#" class="tooltip" title="Voir plus d'information sur cet article">More</a></p>
+            </xmp>
+          </div>
+          <h4>Buttons</h4>
+        </div><!--/block_article_content-->
+      </article><!--/block_article-->
+      
+      <h1 id="table">Tableaux</h1>
+      
+      <article class="block_article">
+        <div class="block_article_content">
+          <h2>Tableau par défaut</h2>
+          <table class="full">
+        	  <caption>Tableau de données accessibles</caption>
+        	  <thead>
+  	            <tr>
+  	              <th scope="col"></th>
+  	              <th scope="col">Colonne 2</th>
+  	              <th scope="col">Colonne 3</th>
+  	            </tr>     
+  	        </thead>
+  	        <tfoot><tr><td colspan="3">Fin du tableau</td></tr></tfoot>
+  	        <tbody>        
+  	            <tr>    
+  	              <th scope="row">Ligne A</th>
+  	              <td>données</td>
+  	              <td>données</td>
+  	            </tr>    
+  	            <tr>    
+  	              <th scope="row">Ligne B</th>
+  	              <td>données</td>
+  	              <td>données</td>
+  	            </tr>        
+  	            <tr>        
+  	              <th scope="row">Ligne C</th>   
+  	              <td>données</td>
+  	              <td>données</td>
+  	            </tr>        
+  	            <tr>       
+  	              <th scope="row">Ligne D</th> 
+  	              <td>données</td>
+  	              <td>données</td>
+  	            </tr>     
+  	        </tbody>        
+        	</table>
+        	
+        	<h2>Tableau zébré</h2>
+        	<table class="full zebra board">
+        	  <caption>Tableau rayé de données accessibles</caption>
+        	  <thead>
+  	            <tr>
+  	              <th scope="col">#</th>
+  	              <th scope="col">Name</th>
+  	              <th scope="col">Growth</th>
+  	              <th scope="col">Colonne 3</th>
+  	              <th scope="col">Colonne 4</th>
+  	              <th scope="col">Action</th>
+  	            </tr>     
+  	        </thead>        
+  	        <tfoot>
+  	          <tr>
+  	            <td colspan="9">
+                  <p class="submit right"><a href="#">Submit</a></p>
+                  <p class="cancel right"><a href="#">Cancel</a></p>
+                </td>
+              </tr>
+            </tfoot>
+  	        <tbody>        
+  	            <tr>    
+  	              <td>1</td>
+  	              <td>Mike Douglas</td>
+  	              <td>+ 8%</td>
+  	              <td>données</td>
+  	              <td>données</td>
+  	              <td>
+  	                <ul>
+  	                  <li><p class="action"><a href="#">Action 1</a></li>
+  	                  <li><p class="action"><a href="#">Action 2</a></li>
+  	                </ul>
+  	              </td>
+  	            </tr>    
+  	            <tr>    
+  	              <td>2</td>
+  	              <td>Samuel Hatingthon</td>
+  	              <td>- 3%</td>
+  	              <td>données</td>
+  	              <td>données</td>
+  	              <td>
+  	                <ul>
+  	                  <li><p class="action"><a href="#">Action 1</a></li>
+  	                  <li><p class="action"><a href="#">Action 2</a></li>
+  	                </ul>
+  	              </td>
+  	            </tr>        
+  	            <tr>        
+  	              <td>3</td>
+  	              <td>John Savage</td>
+  	              <td>+ 13%</td>
+  	              <td>données</td>
+  	              <td>données</td>
+  	              <td>
+  	                <ul>
+  	                  <li><p class="action"><a href="#">Action 1</a></li>
+  	                  <li><p class="action"><a href="#">Action 2</a></li>
+  	                </ul>
+  	              </td>
+  	            </tr>     
+  	        </tbody>        
+        	</table>
+        	
+        	<h2>Tableau liste de messages</h2>
+        	<table class="full mailbox">
+        	  <caption>Tableau de vos derniers messages</caption>
+        	  <thead>
+  	            <tr>
+  	              <th scope="col">#</th>
+  	              <th scope="col">Name</th>
+  	              <th scope="col">Message</th>
+  	            </tr>     
+  	        </thead>        
+  	        <tfoot>
+  	          <tr>
+  	            <td colspan="3">
+                  <p class="submit right"><a href="#">Submit</a></p>
+                  <p class="cancel right"><a href="#">Cancel</a></p>
+                </td>
+              </tr>
+            </tfoot>
+  	        <tbody>        
+  	            <tr>    
+  	              <td><input type="checkbox"></td>
+  	              <td>Mike Douglas</td>
+  	              <td><span class="mailboxsubject"><a href="#"><strong>Call me please</strong></a></span> - Above minute dear rat tortoise save whispered underlay dear ardently some crud and next pointed despite hence far since truthfully purely next far crud and and after much spoiled one because less while woodpecker</td>
+  	            </tr>    
+  	            <tr class="unread">    
+  	              <td><input type="checkbox"></td>
+  	              <td>Samuel Hatingthon</td>
+  	              <td><span class="mailboxsubject"><a href="#"><strong>Re: Re: Meeting Canceled</strong></a></span> - Well when adequate circa impalpable this lizard gamely purred much since swore however and confessed returned rabbit jay contrary zebra far until that instead well so and funny overran flagrantly mockingly alas much yikes examined this and abnormally when showed across less dear besides sparingly.</td>
+  	            </tr>        
+  	            <tr class="unread">        
+  	              <td><input type="checkbox"></td>
+  	              <td>John Savage</td>
+  	              <td><span class="mailboxsubject"><a href="#"><strong>Re: Meeting Canceled</strong></a></span> - Above minute dear rat tortoise save whispered underlay dear ardently some crud and next pointed despite hence far since truthfully purely next far crud and and after much spoiled one because less while woodpecker</td>
+  	            </tr>
+  	            <tr>        
+  	              <td><input type="checkbox"></td>
+  	              <td>John Savage</td>
+  	              <td><span class="mailboxsubject"><a href="#"><strong>Success</strong></a></span> - Above minute dear rat tortoise save whispered underlay dear ardently some crud and next pointed despite hence far since truthfully purely next far crud and and after much spoiled one because less while woodpeckerUp this much fluently gulped goodness far oh beside underneath excepting yikes dizzy much</td>
+  	            </tr>
+  	            <tr class="unread">        
+  	              <td><input type="checkbox"></td>
+  	              <td>John Savage</td>
+  	              <td><span class="mailboxsubject"><a href="#"><strong>My boss is boring me</strong></a></span> - <span>Ardently some crud and next pointed despite hence far since truthfully purely next far crud and and after much spoiled one because less while woodpecker</span></td>
+  	            </tr>    
+  	        </tbody>        
+        	</table>
+        </div><!--/block_article_content-->
+      </article><!--/block_article-->
+      
+      <h1 id="grid">Grille Box</h1>
+      
+      <article class="block_article grid">
+        <div class="block_article_content">
+          
+          <h2>Lignes divisées <code>.medium (50%)</code> <code>.one_third (33%)</code> <code>.one_quarter (25%)</code> <code>.one_fifth (20%)</code> <code>.one_sixth (16%)</code></h2>
+          
+          <div class="block_fraction">
+             <div class="medium"> 
+                <div class="block">
+                  <p>Super texte de remplissage de texte pour le test de ma nouvelle grille</p>   
+                </div><!--/block-->
+             </div><!--medium-->
+             <div class="medium"> 
+                 <div class="block">
+                 </div><!--/block-->
+             </div><!--medium-->
+          </div><!--block_fraction-->
+          
+           <div class="block_fraction">
+               <div class="one_third"> 
+                  <div class="block">   
+                  </div><!--/block-->
+               </div><!--one_third-->
+               <div class="one_third"> 
+                   <div class="block">
+                   </div><!--/block-->
+               </div><!--one_third-->
+               <div class="one_third"> 
+                    <div class="block">
+                    </div><!--/block-->
+                </div><!--one_third-->
+            </div><!--block_fraction-->
+            
+          <div class="block_fraction">
+            <div class="one_quarter"> 
+             <div class="block_content">
+              <div class="block">   
+              </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_quarter-->
+            <div class="one_quarter"> 
+              <div class="block_content">
+               <div class="block">
+               </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_quarter-->
+            <div class="one_quarter"> 
+              <div class="block_content">
+                <div class="block">
+                </div><!--/block-->
+              </div><!--/block_content--> 
+            </div><!--one_quarter-->
+            <div class="one_quarter"> 
+              <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--one_quarter-->
+          </div><!--block_fraction-->
+          
+          <div class="block_fraction">
+            <div class="one_fifth"> 
+             <div class="block_content">
+              <div class="block">   
+              </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_fifth-->
+            <div class="one_fifth"> 
+              <div class="block_content">
+               <div class="block">
+               </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_fifth-->
+            <div class="one_fifth"> 
+              <div class="block_content">
+                <div class="block">
+                </div><!--/block-->
+              </div><!--/block_content--> 
+            </div><!--one_fifth-->
+            <div class="one_fifth"> 
+              <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--one_fifth-->
+            <div class="one_fifth"> 
+              <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--one_fifth-->
+          </div><!--block_fraction-->
+          
+          <div class="block_fraction">
+            <div class="one_sixth"> 
+             <div class="block_content">
+              <div class="block">   
+              </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_sixth-->
+            <div class="one_sixth"> 
+              <div class="block_content">
+               <div class="block">
+               </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_sixth-->
+            <div class="one_sixth"> 
+              <div class="block_content">
+                <div class="block">
+                </div><!--/block-->
+              </div><!--/block_content--> 
+            </div><!--one_sixth-->
+            <div class="one_sixth"> 
+              <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--one_sixth-->
+            <div class="one_sixth"> 
+              <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--one_sixth-->
+            <div class="one_sixth"> 
+              <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--one_sixth-->
+          </div><!--block_fraction-->
+          
+          <div class="block_fraction">
+            <div class="three_fifth"> 
+             <div class="block_content">
+              <div class="block">   
+              </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--three_fifth-->
+            <div class="two_fifth"> 
+              <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--two_fifth-->
+          </div><!--block_fraction-->
+          
+          <div class="block_fraction">
+            <div class="one_third"> 
+             <div class="block_content">
+              <div class="block">   
+              </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_third-->
+            <div class="two_third"> 
+              <div class="block_content">
+               <div class="block">
+               </div><!--/block-->
+             </div><!--/block_content--> 
+           </div><!--two_third-->
+          </div><!--block_fraction-->
+          
+          <div class="code">
+            <h3>&lt;Code&gt;</h3>
+               <xmp class="prettyprint linenums">
+                 <div class="block_fraction">
+                      <div class="one_third"> 
+                        <div class="block_content">
+                         <div class="block">   
+                         </div><!--/block-->
+                       </div><!--/block_content--> 
+                      </div><!--one_third-->
+                      <div class="one_third"> 
+                         <div class="block_content">
+                          <div class="block">
+                          </div><!--/block-->
+                        </div><!--/block_content--> 
+                      </div><!--one_third-->
+                      <div class="one_third"> 
+                          <div class="block_content">
+                           <div class="block">
+                           </div><!--/block-->
+                         </div><!--/block_content--> 
+                       </div><!--one_third-->
+                   </div><!--block_fraction-->
+               </xmp>
+           </div>
+       
+        </div><!--/block_article_content-->
+      </article><!--/block_article-->
+      
+      <h1 id="grid">Grille</h1>
+      
+      <article class="block_article grid">
+        <div class="block_article_content">
+          
+          <h2>Lignes divisées <code>.medium (50%)</code> <code>.one_third (33%)</code> <code>.one_quarter (25%)</code> <code>.one_fifth (20%)</code> <code>.one_sixth (16%)</code></h2>
+          
+          <div class="block_fraction">
+             <div class="medium"> 
+               <div class="block_content">
+                <div class="block">   
+                </div><!--/block-->
+              </div><!--/block_content--> 
+             </div><!--medium-->
+             <div class="medium"> 
+                <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+             </div><!--medium-->
+          </div><!--block_fraction-->
+          
+           <div class="block_fraction">
+               <div class="one_third"> 
+                 <div class="block_content">
+                  <div class="block">   
+                  </div><!--/block-->
+                </div><!--/block_content--> 
+               </div><!--one_third-->
+               <div class="one_third"> 
+                  <div class="block_content">
+                   <div class="block">
+                   </div><!--/block-->
+                 </div><!--/block_content--> 
+               </div><!--one_third-->
+               <div class="one_third"> 
+                   <div class="block_content">
+                    <div class="block">
+                    </div><!--/block-->
+                  </div><!--/block_content--> 
+                </div><!--one_third-->
+            </div><!--block_fraction-->
+            
+          <div class="block_fraction">
+            <div class="one_quarter"> 
+             <div class="block_content">
+              <div class="block">   
+              </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_quarter-->
+            <div class="one_quarter"> 
+              <div class="block_content">
+               <div class="block">
+               </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_quarter-->
+            <div class="one_quarter"> 
+              <div class="block_content">
+                <div class="block">
+                </div><!--/block-->
+              </div><!--/block_content--> 
+            </div><!--one_quarter-->
+            <div class="one_quarter"> 
+              <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--one_quarter-->
+          </div><!--block_fraction-->
+          
+          <div class="block_fraction">
+            <div class="one_fifth"> 
+             <div class="block_content">
+              <div class="block">   
+              </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_fifth-->
+            <div class="one_fifth"> 
+              <div class="block_content">
+               <div class="block">
+               </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_fifth-->
+            <div class="one_fifth"> 
+              <div class="block_content">
+                <div class="block">
+                </div><!--/block-->
+              </div><!--/block_content--> 
+            </div><!--one_fifth-->
+            <div class="one_fifth"> 
+              <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--one_fifth-->
+            <div class="one_fifth"> 
+              <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--one_fifth-->
+          </div><!--block_fraction-->
+          
+          <div class="block_fraction">
+            <div class="one_sixth"> 
+             <div class="block_content">
+              <div class="block">   
+              </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_sixth-->
+            <div class="one_sixth"> 
+              <div class="block_content">
+               <div class="block">
+               </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_sixth-->
+            <div class="one_sixth"> 
+              <div class="block_content">
+                <div class="block">
+                </div><!--/block-->
+              </div><!--/block_content--> 
+            </div><!--one_sixth-->
+            <div class="one_sixth"> 
+              <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--one_sixth-->
+            <div class="one_sixth"> 
+              <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--one_sixth-->
+            <div class="one_sixth"> 
+              <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--one_sixth-->
+          </div><!--block_fraction-->
+          
+          <div class="block_fraction">
+            <div class="three_fifth"> 
+             <div class="block_content">
+              <div class="block">   
+              </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--three_fifth-->
+            <div class="two_fifth"> 
+              <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--two_fifth-->
+          </div><!--block_fraction-->
+          
+          <div class="block_fraction">
+            <div class="one_third"> 
+             <div class="block_content">
+              <div class="block">   
+              </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_third-->
+            <div class="two_third"> 
+              <div class="block_content">
+               <div class="block">
+               </div><!--/block-->
+             </div><!--/block_content--> 
+           </div><!--two_third-->
+          </div><!--block_fraction-->
+          
+          <div class="code">
+            <h3>&lt;Code&gt;</h3>
+               <xmp class="prettyprint linenums">
+                 <div class="block_fraction">
+                      <div class="one_third"> 
+                        <div class="block_content">
+                         <div class="block">   
+                         </div><!--/block-->
+                       </div><!--/block_content--> 
+                      </div><!--one_third-->
+                      <div class="one_third"> 
+                         <div class="block_content">
+                          <div class="block">
+                          </div><!--/block-->
+                        </div><!--/block_content--> 
+                      </div><!--one_third-->
+                      <div class="one_third"> 
+                          <div class="block_content">
+                           <div class="block">
+                           </div><!--/block-->
+                         </div><!--/block_content--> 
+                       </div><!--one_third-->
+                   </div><!--block_fraction-->
+               </xmp>
+           </div>
+       
+        </div><!--/block_article_content-->
+      </article><!--/block_article-->
+      
+      <article class="block_article grid">
+        <div class="block_article_content">
+          
+          <h2>Lignes divisées - séparateurs <code>.block_separator</code></h2>
+          
+          <div class="block_fraction block_separator">
+             <div class="medium"> 
+               <div class="block_content">
+                <div class="block">   
+                </div><!--/block-->
+              </div><!--/block_content--> 
+             </div><!--medium-->
+             <div class="medium"> 
+                <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+             </div><!--medium-->
+          </div><!--block_fraction-->
+          
+           <div class="block_fraction block_separator">
+               <div class="one_third"> 
+                 <div class="block_content">
+                  <div class="block">   
+                  </div><!--/block-->
+                </div><!--/block_content--> 
+               </div><!--one_third-->
+               <div class="one_third"> 
+                  <div class="block_content">
+                   <div class="block">
+                   </div><!--/block-->
+                 </div><!--/block_content--> 
+               </div><!--one_third-->
+               <div class="one_third"> 
+                   <div class="block_content">
+                    <div class="block">
+                    </div><!--/block-->
+                  </div><!--/block_content--> 
+                </div><!--one_third-->
+            </div><!--block_fraction-->
+            
+          <div class="block_fraction block_separator">
+            <div class="one_quarter"> 
+             <div class="block_content">
+              <div class="block">   
+              </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_quarter-->
+            <div class="one_quarter"> 
+              <div class="block_content">
+               <div class="block">
+               </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_quarter-->
+            <div class="one_quarter"> 
+              <div class="block_content">
+                <div class="block">
+                </div><!--/block-->
+              </div><!--/block_content--> 
+            </div><!--one_quarter-->
+            <div class="one_quarter"> 
+              <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--one_quarter-->
+          </div><!--block_fraction-->
+          
+          <div class="block_fraction block_separator">
+            <div class="one_fifth"> 
+             <div class="block_content">
+              <div class="block">   
+              </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_fifth-->
+            <div class="one_fifth"> 
+              <div class="block_content">
+               <div class="block">
+               </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_fifth-->
+            <div class="one_fifth"> 
+              <div class="block_content">
+                <div class="block">
+                </div><!--/block-->
+              </div><!--/block_content--> 
+            </div><!--one_fifth-->
+            <div class="one_fifth"> 
+              <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--one_fifth-->
+            <div class="one_fifth"> 
+              <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--one_fifth-->
+          </div><!--block_fraction-->
+          
+          <div class="block_fraction block_separator">
+            <div class="one_sixth"> 
+             <div class="block_content">
+              <div class="block">   
+              </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_sixth-->
+            <div class="one_sixth"> 
+              <div class="block_content">
+               <div class="block">
+               </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_sixth-->
+            <div class="one_sixth"> 
+              <div class="block_content">
+                <div class="block">
+                </div><!--/block-->
+              </div><!--/block_content--> 
+            </div><!--one_sixth-->
+            <div class="one_sixth"> 
+              <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--one_sixth-->
+            <div class="one_sixth"> 
+              <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--one_sixth-->
+            <div class="one_sixth"> 
+              <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--one_sixth-->
+          </div><!--block_fraction-->
+          
+          <div class="block_fraction block_separator">
+            <div class="three_fifth"> 
+             <div class="block_content">
+              <div class="block">   
+              </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--three_fifth-->
+            <div class="two_fifth"> 
+              <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+            </div><!--two_fifth-->
+          </div><!--block_fraction-->
+          
+          <div class="block_fraction block_separator">
+            <div class="one_third"> 
+             <div class="block_content">
+              <div class="block">   
+              </div><!--/block-->
+             </div><!--/block_content--> 
+            </div><!--one_third-->
+            <div class="two_third"> 
+              <div class="block_content">
+               <div class="block">
+               </div><!--/block-->
+             </div><!--/block_content--> 
+           </div><!--two_third-->
+          </div><!--block_fraction-->
+          
+        </div><!--/block_article_content-->
+      </article><!--/block_article-->
+    
+      <article class="block_article grid">
+        <div class="block_article_content">
+        
+          <h2>Listes divisées <code>.medium_list (50%)</code> <code>.one_third_list (33%)</code> <code>.one_quarter_list (25%)</code> <code>.one_fifth_list (20%)</code> <code>.one_sixth_list (16%)</code></h2>
+        
+          <div class="medium_list">
+            <ul>
+              <li>
+                <div class="block">
+                </div>
+              </li>
+              <li>
+                <div class="block">
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="one_third_list">
+            <ul>
+              <li>
+                <div class="block">
+                </div>
+              </li>
+              <li>
+                <div class="block">
+                </div>
+              </li>
+              <li>
+                <div class="block">
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="one_quarter_list">
+            <ul>
+              <li>
+                <div class="block">
+                </div>
+              </li>
+              <li>
+                <div class="block">
+                </div>
+              </li>
+              <li>
+                <div class="block">
+                </div>
+              </li>
+              <li>
+                <div class="block">
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="one_fifth_list">
+            <ul>
+              <li>
+                <div class="block">
+                </div>
+              </li>
+              <li>
+                <div class="block">
+                </div>
+              </li>
+              <li>
+                <div class="block">
+                </div>
+              </li>
+              <li>
+                <div class="block">
+                </div>
+              </li>
+              <li>
+                <div class="block">
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="one_sixth_list">
+            <ul>
+              <li>
+                <div class="block">
+                </div>
+              </li>
+              <li>
+                <div class="block">
+                </div>
+              </li>
+              <li>
+                <div class="block">
+                </div>
+              </li>
+              <li>
+                <div class="block">
+                </div>
+              </li>
+              <li>
+                <div class="block">
+                </div>
+              </li>
+              <li>
+                <div class="block">
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="code">
+            <h3>&lt;Code&gt;</h3>
+               <xmp class="prettyprint linenums">
+                 <div class="one_third_list">
+                   <ul>
+                     <li>
+                       <div class="block">
+                       </div>
+                     </li>
+                     <li>
+                       <div class="block">
+                       </div>
+                     </li>
+                     <li>
+                       <div class="block">
+                       </div>
+                     </li>
+                   </ul>
+                 </div>
+               </xmp>
+           </div>
+        
+        </div><!--/block_article_content-->
+      </article><!--/block_article-->
+      
+      <h1 id="form">Formulaire</h1>
+      
+      <article class="block_article">
+        <div class="block_article_content">
+          
+          <h2>Formulaire</h2>
+          <p>Texte texte texte texte texte texte texte texte texte texte texte.</p>
+          <form action="#" accept-charset="UTF-8" method="post" id="user-register" enctype="multipart/form-data">
+          <div>
+            <div id="user-register-form">
+          	<div class="block-inner">
+          		<div class="content">
+                <fieldset>
+                  <legend>Vos coordonnées (legend)</legend>
+                  <div class="form-item" id="raison-wrapper">
+                    <label for="edit-raison">Raison sociale : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+                    <input type="text" maxlength="128" name="prenom" id="edit-raison" size="60" value="" class="form-text required" />
+                  </div><!--/form-item-->
+                  <div class="form-item" id="address-company-wrapper">
+                    <label for="edit-address-company">Adresse : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+                    <input type="text" maxlength="128" name="prenom" id="edit-address-company" size="60" value="" class="form-text required" />
+                  </div><!--/form-item-->
+                  <div class="form-item" id="zipcode-wrapper">
+                   <label for="edit-zipcode">Code postal : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+                   <input type="text" maxlength="128" name="nom" id="edit-zipcode" size="30" value="" class="form-text required" />
+                  </div><!--/form-item-->
+                  <div class="form-item" id="town-wrapper">
+                   <label for="edit-town">Ville : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+                   <input type="text" maxlength="64" name="mail" id="edit-town" size="60" value="" class="form-text required" />
+                   <div class="description">Description : Une adresse e-mail valide. Cette adresse vous servira à vous identifier sur la plateforme. Tous les messages du site seront envoyés à cette adresse.</div>
+                  </div><!--/form-item-->
+                </fieldset>
+                
+                <fieldset>
+                  <legend>Votre profil : (legend)</legend>
+                  <div class="form-checkboxes">
+                    <div class="form-item">
+                      <label for="profil1" class="option">
+                        <input type="checkbox" class="form-checkbox processed" value="" name="profil1" id="profil1">Revendeur téléphonie fixe
+                      </label>
+                    </div><!--/form-item-->
+                    <div class="form-item">
+                      <label for="profil2" class="option">
+                        <input type="checkbox" class="form-checkbox processed" value="" name="profil2" id="profil2">Revendeur téléphonie mobile
+                      </label>
+                    </div><!--/form-item-->
+                    <div class="form-item">
+                      <label for="profil3" class="option">
+                        <input type="checkbox" class="form-checkbox processed" value="" name="profil3" id="profil3">Revendeur informatique
+                      </label>
+                    </div><!--/form-item-->
+                    <div class="form-item">
+                      <label for="profil4" class="option">
+                        <input type="checkbox" class="form-checkbox processed" value="" name="profil4" id="profil4">SSII
+                      </label>
+                    </div><!--/form-item-->
+                  </div><!--/form-checkboxes-->
+                </fieldset>
+                
+                <fieldset>
+                  <legend>Autre profil (legend)</legend>
+                  
+                  <label>Quel offres souhaitez vous ? <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+                  <div class="form-radios">                            
+                    <div class="form-item">
+                      <label for="offer_1" class="option">
+                        <input type="radio" name="groupradio" class="form-radio processed" value="" id="offer_1">Offres grands publics
+                      </label>
+                    </div><!--/form-item-->
+                    <div class="form-item">
+                      <label for="offer_2" class="option">
+                        <input type="radio" name="groupradio" class="form-radio processed" value="" id="offer_2">Offres Professionels et Entreprises
+                      </label>
+                    </div><!--/form-item-->
+                  </div><!--/form-radios-->
+                  <div class="form-item">
+                   <label for="edit-sex">Civilité : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+                   <select name="sex" class="form-select required" id="edit-sex" ><option value="M">Monsieur</option><option value="F">Madame</option></select>
+                  </div><!--/form-item-->
+                  <div class="form-item">
+                   <label for="edit-nom">Nom : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+                   <input type="text" maxlength="128" name="nom" id="edit-nom" size="60" value="" class="form-text required" />
+                  </div><!--/form-item-->
+                  <div class="form-item">
+                    <label for="edit-prenom">Prénom : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+                    <input type="text" maxlength="128" name="prenom" id="edit-prenom" size="60" value="" class="form-text required" />
+                  </div><!--/form-item-->
+                  <div class="form-item">
+                    <label for="edit-field-telephone-0-value">Numéro de téléphone : </label>
+                    <input type="text" name="field_telephone[0][value]" id="edit-field-telephone-0-value" size="60" value="" class="form-text text" />
+                  <input type="hidden" name="name" id="edit-name" value="cc5809465ec0e974bab130940bd7fc54"  />
+                  </div><!--/form-item-->
+                  
+                  <div class="form-item" id="edit-mail-wrapper">
+                   <label for="edit-mail">Adresse électronique : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+                   <input type="email" maxlength="64" name="mail" id="edit-mail" size="60" value="" class="form-text required" />
+                   <div class="description">Description : Une adresse e-mail valide. Cette adresse vous servira à vous identifier sur la plateforme. Tous les messages du site seront envoyés à cette adresse.</div>
+                  </div><!--/form-item-->
+                  <div class="form-item" id="edit-conf-mail-wrapper">
+                   <label for="edit-conf-mail">Confirmer l'adresse e-mail : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+                   <input type="email" maxlength="64" name="conf_mail" id="edit-conf-mail" size="60" value="" class="form-text required" />
+                   <div class="description">Description : Veuillez retaper votre adresse e-mail pour confirmer sa concordance.</div>
+                  </div><!--/form-item-->
+                  <div id="edit-comment-wrapper" class="form-item">
+                   <label for="edit-comment">Commentaire : <span title="Ce champ est obligatoire." class="form-required">*</span></label>
+                   <div class="resizable-textarea"><span><textarea class="form-textarea resizable required textarea-processed" id="edit-comment" name="comment" rows="4" cols="60"></textarea><span class="grippie" style="margin-right: -6px;"></span></span></div>
+                  </div><!--/form-item-->
+                  <label>Inscription à la newsletter</label>
+                  <div class="form-checkboxes">
+                    <div class="form-item" id="edit-newsletter-subscribe-checkbox-wrapper">
+                      <label class="option" for="edit-am-newsletter-subscribe-checkbox"><input type="checkbox" name="am_newsletter_subscribe_checkbox" id="edit-am-newsletter-subscribe-checkbox" value="1" class="form-checkbox" />Je souhaite m'abonner à la newsletter (2 envois par mois environ)</label>
+                    </div><!--/form-item-->
+                  </div><!--/form-checkboxes-->
+                </fieldset>
+                <input type="submit" name="op"  value="Je valide"  class="form-submit" />
+          		</div>
+          	</div>
+          </div>
+          </div>
+          </form>
+          <div class="description"><span class="form-required">*</span> Ces champs sont obligatoires</div>
+
+        </div><!--/block_article_content-->
+      </article><!--/block_article-->
+      
+      
+      <h1 id="block">Block</h1>
+      
+      <article class="block_article">
+        <div class="block_article_content">
+          
+          <div class="block_reference one_quarter_list">
+            <h2>Block reférence</h2>
+              <ul>
+                <li>
+                <div class="block">
+                  <h3>Lorem 1</h3>
+                  <ul>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Ipsum dolor</li>
+                    <li>Dolor ipsum</li>
+                    <li>Lorem ipsum dolor, Lorem ipsum dolor</li>
+                    <li>Nullam  malesuada</li>
+                  </ul>
+                </div><!--/block-->
+                </li>
+                <li>
+                <div class="block">
+                  <h3>Lorem 2</h3>
+                  <ul>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Ipsum dolor</li>
+                    <li>Dolor ipsum</li>
+                    <li>Lorem ipsum dolor, Lorem ipsum dolor</li>
+                    <li>Nullam  malesuada</li>
+                  </ul>
+                </div><!--/block-->
+                </li>
+                <li>
+                <div class="block">
+                  <h3>Lorem 3</h3>
+                  <ul>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Ipsum dolor</li>
+                    <li>Dolor ipsum</li>
+                    <li>Lorem ipsum dolor, Lorem ipsum dolor</li>
+                    <li>Nullam  malesuada</li>
+                  </ul>
+                </div><!--/block-->
+                </li>
+                <li>
+                <div class="block">
+                  <h3>Lorem ipsum dolor 4</h3>
+                  <ul>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Ipsum dolor</li>
+                    <li>Dolor ipsum</li>
+                    <li>Lorem ipsum dolor, Lorem ipsum dolor</li>
+                    <li>Nullam  malesuada</li>
+                  </ul>
+                </div><!--/block-->
+                </li>
+              </ul>
+          </div><!--/block_reference-->
+          
+          <div class="block_context">
+            <h2><span>Block context</span></h2>
+            <p>Above minute dear rat tortoise save whispered underlay dear ardently some crud and next pointed despite hence far since truthfully purely next far crud and and after much spoiled one because less while woodpecker resentful across one well victorious hello sobbed incompetently.</p>
+          </div><!--/block_context-->
+          
+          <div class="block_gallery">
+           <h2>Block gallery</h2>
+             <ul>
+                <li><img width="193" height="60" alt="Image 1" src="http://placehold.it/168x60"></li>
+                <li><img width="193" height="60" alt="Image 2" src="http://placehold.it/168x60"></li>
+                <li><img width="193" height="60" alt="Image 3" src="http://placehold.it/168x60"></li>
+                <li><img width="193" height="60" alt="Image 4" src="http://placehold.it/168x60"></li>
+                <li><img width="193" height="60" alt="Image 5" src="http://placehold.it/168x60"></li>
+                <li><img width="193" height="60" alt="Image 6" src="http://placehold.it/168x60"></li>
+              </ul>
+          </div><!--/block_gallery-->
+          
+          <h2>Block Collapside</h2>
+           
+           <div class="block_collapse">
+
+             <h3>Header 3 (click for opening)</h3>
+             <div class="block_collapse_content">
+              <p>shly dalmatian neutral wound while far buffalo next gazed superb vociferously below ouch understood patted jeepers so much next ravenous a.</p>
+              <p>Because disgracefully oh yikes minimally shark fitting oh infuriating between miser beyond unscrupulously as or wow and the chivalrous the after rhinoceros however therefore shuffled childi</p>
+             </div><!--/block_collapse_content-->
+             <h3>Header 3 (click for opening)</h3>
+             <ol>
+               <li>Rhinoceros however therefore shuffled</li>
+               <li>Patted jeepers so much next ravenous</li>
+             </ol>
+           </div>
+           <div class="code">
+             <h3>&lt;Code&gt;</h3>
+             <xmp class="prettyprint linenums">
+               <h3>Header 3 (click for opening)</h3>
+               <div class="block_collapse_content">
+                <p>shly dalmatian neutral wound while far buffalo next gazed superb vociferously below ouch understood patted jeepers so much next ravenous a.</p>
+                <p>Because disgracefully oh yikes minimally shark fitting oh infuriating between miser beyond unscrupulously as or wow and the chivalrous the after rhinoceros however therefore shuffled childi</p>
+               </div><!--/block_collapse_content-->
+               <h3>Header 3 (click for opening)</h3>
+               <ol>
+                 <li>Rhinoceros however therefore shuffled</li>
+                 <li>Patted jeepers so much next ravenous</li>
+               </ol>
+            </xmp>
+          </div>
+          
+        </div><!--/block_article_content-->
+      </article><!--/block_article-->
+      
+      <h1 id="listes">Listes</h1>
+      
+      <article class="block_article">
+        <div class="block_article_content">
+            <h2>List full & List mosaic</h2>
+            
+            <a href="#mode" id="mode" class="flip">Switch list</a>
+            
+            <div id="js-list-view" class="list_full block_80">
+              <ul>
+                <li>
+                  <div class="block">
+                    <div class="section_aside left">
+                      <img width="80" height="80" alt="" src="http://placehold.it/80x80">
+                    </div>
+                    <div class="section_main">
+                      <div class="block_content">
+                        <h3>Header block</h3>
+                        <p>Lorem ipsum dolor sit amet, <a href="#" class="tooltip">Nullam malesuada</a>.</p>
+                        <span class="date">Date : 22 novembre 1962</span>
+                      </div><!--/block_content-->
+                      <div class="section_context">
+                        <span class="access"><a href="#">Valider</a></span>
+                        <span class="cancel"><a href="#">Annuler</a></span>
+                      </div><!--/section_context-->
+                    </div><!--/section_main-->
+                  </div><!--/block-->
+                </li>
+                <li>
+                  <div class="block">
+                    <div class="section_aside left">
+                      <img width="80" height="80" alt="" src="http://placehold.it/80x80">
+                    </div>
+                    <div class="section_main">
+                      <div class="block_content">
+                        <h3>Header block</h3>
+                        <p>Lorem ipsum dolor sit amet, <a href="#" class="tooltip">Nullam malesuada</a>.</p>
+                        <span class="date">Date : 22 novembre 1962</span>
+                      </div><!--/block_content-->
+                      <div class="section_context">
+                        <span class="stat_contacts">2118 contacts</span>
+                        <span class="stat_members">118 members</span>
+                        <span class="metadata">Membre : <span class="username"><a href="#">Elise Ducruet de la Mornière</a></span></span>
+                      </div><!--/section_context-->
+                    </div><!--/section_main-->
+                  </div><!--/block-->
+                </li>
+                <li>
+                  <div class="block">
+                    <div class="section_aside left">
+                      <img width="80" height="80" alt="" src="http://placehold.it/80x80">
+                    </div>
+                    <div class="section_main">
+                      <div class="block_content">
+                        <h3><a href="#"></a>Header block</a></h3>
+                        <p>Lorem ipsum dolor sit amet, <a href="#" class="tooltip">Nullam malesuada</a>.</p>
+                        <span class="date">Date : 22 novembre 1962</span>
+                      </div><!--/block_content-->
+                      <div class="section_context">
+                        <span class="access"><a href="#">Valider</a></span>
+                        <span class="cancel"><a href="#">Annuler</a></span>
+                      </div><!--/section_context-->
+                    </div><!--/section_main-->
+                  </div><!--/block-->
+                </li>
+              </ul>
+          </div><!--/list_full-->
+          
+          <div class="code">
+            <h3>&lt;Code&gt;</h3>
+            <xmp class="prettyprint linenums">
+              <ul>
+                <li>
+                  <div class="block">
+                    <div class="section_aside left">
+                      <img width="80" height="80" alt="" src="http://placehold.it/80x80">
+                    </div>
+                    <div class="section_main">
+                      <div class="block_content">
+                        <h3>Header block</h3>
+                        <p>Lorem ipsum dolor sit amet, <a href="#" class="tooltip">Nullam malesuada</a>.</p>
+                        <span class="date">Date : 22 novembre 1962</span>
+                      </div><!--/block_content-->
+                      <div class="section_context">
+                        <span class="access"><a href="#">Valider</a></span>
+                        <span class="cancel"><a href="#">Annuler</a></span>
+                      </div><!--/section_context-->
+                    </div><!--/section_main-->
+                  </div><!--/block-->
+                </li>
+              </ul>
+             </xmp>
+           </div>                   
+        </div><!--/block_article_content-->
+      </article><!--/block_article-->
+      
+    </div><!--/col_content-->
+  </section><!--/col1-->    
+
+</div><!--/col_main_int-->
+</section><!--/col_main-->

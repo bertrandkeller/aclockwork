@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ThemeScouade | Gabarit HTML5 Model Layout</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    
+    <style>
+    .nav_command li a span,
+    .nav_tabs.publisher li {font-family:'WebSymbolsRegular';font-weight:normal;}
+    </style>
+    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-extend/css/font-symbol.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-base/css/aclockwork.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-extend/css/css.php?file=prettify.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-extend/css/css.php?file=fancybox.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-extend/css/css.php?file=reveal.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-extend/css/css.php?file=jnice.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-base/css/debug.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../themescouade/aclockwork-base/css/print.css" />
+
+    <script src="../themescouade/aclockwork-base/js/jquery-1.4.4.min.js"></script>
+    <script src="../themescouade/aclockwork-base/js/head.min.js"></script>
+    <script type="text/javascript">
+      head.js(
+        {tool: "../themescouade/aclockwork-base/js/main.js"},
+        {load: "../themescouade/aclockwork-base/js/jquery.lazyload.mini.js"},
+        {load: "../themescouade/aclockwork-base/js/jquery.cookie.js"},
+        {tool: "../themescouade/aclockwork-base/js/jquery.tipTip.minified.js"},
+        {tool: "../themescouade/aclockwork-base/js/jquery.idTabs.min.js"},
+        {tool: "../themescouade/aclockwork-base/js/jquery.scrollTo.js"},
+        {tool: "../themescouade/aclockwork-base/js/jquery.placeholder.js"},
+        {view: "../themescouade/aclockwork-base/js/jquery.bxSlider.js"},
+        {view: "../themescouade/aclockwork-base/js/jquery.collapse.js"},
+        {view: "../themescouade/aclockwork-base/js/jquery.select.js"},
+        {view: "../themescouade/aclockwork-base/js/accessifyhtml5.jquery.min.js"},
+        {debug:"../themescouade/aclockwork-base/js/jquery.debug.js"},
+        {debug:"../themescouade/aclockwork-extend/js/jquery.inc.js"},
+        {view: "../themescouade/aclockwork-extend/js/jquery.onepage.nav.js"},
+        {view: "../themescouade/aclockwork-extend/js/jquery.biggerlink.js"},
+        {view: "../themescouade/aclockwork-extend/js/jquery.viewmode.js"},
+        {view: "../themescouade/aclockwork-extend/js/jquery.nice.js"},
+        {view: "../themescouade/aclockwork-extend/js/jcaption.js"},
+        {debug:"../themescouade/aclockwork-extend/js/prettify.js"}
+      );
+    </script>
+    
+    <!--[if lte IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" type="text/css" media="screen" href="themes/themescouade/css/ie.css" />
+      <script type="text/javascript" src="themes/themescouade/aclockwork-extend/js/jquery.autocolumn.js"></script>
+      <script type="text/javascript">
+        $(function(){
+          $('.list_column_medium').columnize({columns:2});
+          $('.list_column_one_third').columnize({columns:3});
+    		});
+      </script>
+    <![endif]-->
+    <!--[if lte IE 7]>
+      <script type="text/javascript" src="themes/themescouade/aclockwork-base/js/jquery.pseudo.js"></script>
+    <![endif]-->
+    <!--[if lte IE 6]>
+      <script type="text/javascript" src="themes/themescouade/aclockwork-base/js/main-ie.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+    <nav id="nav_skiplink" class="nav_skiplink" role="navigation">
+      <ul id="top">
+        <li><a href="#col_main">aller au contenu</a></li>
+        <li><a href="#nav_main">aller à la navigation principale</a></li>
+        <li><a href="#col2">aller à la colonne contextuelle</a></li>
+      </ul>  
+    </nav><!--/nav_skiplink-->    
+    
+    <ul id="nav_debug" class="nav_debug" role="navigation">
+      <li><p class="debug action"><a href="#">debug</a></p></li>
+      <li><p class="elementoff action"><a href="#">element</a></p></li>
+    </ul>
+    
+    <header class="banner_user">
+      <div class="banner_user_int container layout">
+        <nav class="nav_user hlist" role="navigation">
+          <ul>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Déconnexion</a></li>
+          </ul>
+        </nav><!--/nav_user-->
+      
+        <nav id="nav_lang" class="nav_lang hlist" role="navigation">
+          <ul>
+            <li><a href="#">fr</a></li>
+            <li><a href="#">en</a></li>
+            <li><a href="#">de</a></li>
+          </ul>
+        </nav><!--/nav_lang-->
+      
+      </div><!--/banner_user_int-->  
+    </header><!--/banner_user-->
+    
+    <header class="banner_main">
+      <div class="banner_main_int container layout">
+        
+        <div class="block_logo">
+          <h1><a href="#"><img src="../themescouade/aclockwork-base/images/logo_clockwork.png" alt="titre du site" width="300" /></a></h1>
+        </div>
+
+        <form id="search_main" class="search_main" >
+           <label for="searchtext">Search</label>
+           <input id="searchtext" name='searchtext' placeholder="search" type="search" />
+           <input class="action" type="submit" value="search">
+        </form>
+        <nav id="nav_main" class="nav_main hlist clearfix" role="navigation">
+          <ul>
+            <li><a href="#">Lien 1</a></li>
+            <li><a href="#">Lien 2</a></li>
+            <li><a href="#">Lien 3</a></li>
+            <li><a href="#">Lien 4</a></li>
+            <li><a href="#">Lien 5</a></li>
+          </ul>
+        </nav><!--/nav_main-->
+      </div><!--/banner_main_int-->
+    </header><!--/banner_main-->
+    
+    <div id="container" class="container layout one_column grid">
+      <div class="container_int">
+        
+        <h1 class="h2">One column <code>.one_column</code></h1>
+        
+        <section class="col_main">
+        <div class="col_main_int">
+          
+          <section class="col1">
+            <div class="col_content">
+              
+              <h3>Colonne 1</h3>
+              
+            </div><!--/col_content-->
+          </section><!--/col1-->
+
+        </div><!--/col_main_int-->
+        </section><!--/col_main-->        
+        
+      </div><!--/container_int-->
+    </div><!--/container-->
+    
+    <div class="container layout two_column grid">
+      <div class="container_int">
+        
+        <h1 class="h2">Two column <code>.two_column</code></h1>
+        
+        <section class="col_main">
+        <div class="col_main_int">
+          
+          <section class="col1">
+            <div class="col_content">
+              
+              <h3>Colonne 1</h3>
+              
+            </div><!--/col_content-->
+          </section><!--/col1-->
+          
+          <section class="col2">
+            <div class="col_content">
+              
+              <h3>Colonne 2</h3>
+              
+            </div><!--/col_content-->
+          </section><!--/col2-->
+
+        </div><!--/col_main_int-->
+        </section><!--/col_main-->        
+        
+      </div><!--/container_int-->
+    </div><!--/container-->
+    
+    <div class="container layout two_column_left grid">
+      <div class="container_int">
+        
+        <h1 class="h2">Two column left <code>.two_column_left</code></h1>
+        
+        <aside class="col_aside">
+          <div class="col_content">
+            
+            <h3>Colonne aside</h3>
+            
+          </div><!--/col_content-->
+        </aside><!--/col_aside-->
+        
+        <section class="col_main">
+        <div class="col_main_int">
+          
+          <section class="col1">
+            <div class="col_content">
+              
+              <h3>Colonne 1</h3>
+              
+            </div><!--/col_content-->
+          </section><!--/col1-->
+
+        </div><!--/col_main_int-->
+        </section><!--/col_main-->        
+        
+      </div><!--/container_int-->
+    </div><!--/container-->
+    
+    <div class="container layout three_column grid">
+      <div class="container_int">        
+        
+        <h1 class="h2">Three column</h1>
+        
+        <aside class="col_aside">
+          <div class="col_content">
+            
+            <h3>Colonne aside</h3>
+            
+          </div><!--/col_content-->
+        </aside><!--/col_aside-->
+        
+        <section class="col_main">
+        <div id="col_main_int" class="col_main_int">
+          
+          <section class="col1">
+            <div class="col_content">
+              
+              <h3>Colonne 1</h3>
+              
+            </div><!--/col_content-->
+          </section><!--/col1-->
+          
+          <section class="col2">
+            <div class="col_content">
+              
+              <h3>Colonne 2</h3>
+              
+            </div><!--/col_content-->
+          </section><!--/col2-->
+
+        </div><!--/col_main_int-->
+        </section><!--/col_main-->
+        
+      </div><!--/container_int-->
+    </div><!--/container-->
+        
+    <footer class="footer_main">
+       <nav id="nav_footer" class="nav_footer" role="navigation">
+         <p id="toppage" class="toppage"><a href="#top">Haut de page</a></p>
+         <ul>
+           <li><a href="#">Menu 1</a></li>
+           <li><a href="#">Menu 2</a></li>
+           <li><a href="#">Menu 3</a></li>
+           <li><a href="#">Menu 4</a></li>
+           <li><a href="#">Menu 5</a></li>
+         </ul>
+       </nav><!--/nav_footer-->
+    </footer><!--/footer-->
+  </body>
+</html>

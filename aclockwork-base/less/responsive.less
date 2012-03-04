@@ -1,0 +1,59 @@
+@media only screen and (max-width:1024px) {
+  body {}
+  body                                              {font-size:90%;}
+  .container.layout                                 {margin:0 1%;width:98%;}
+  .col_main                                         {margin:0;width:100%;}
+  .col1                                             {margin-bottom:1em;width:70%;}
+  .col2                                             {margin-bottom:1em;width:29%;}
+  .col_aside                                        {margin:0;width:100%;}
+  .two_column .col1                                 {width:100%;}
+  .two_column .col2                                 {width:100%;}
+  .block_fraction                                   {margin:0 !important;}
+  [class$=_list] > ul                               {margin:0 !important;}
+  [class$=_list] > ul > li                          {width:33.33% !important;}
+  .medium_list > ul > li                            {width:50% !important;}
+  [class$=_list] > ul > li:nth-child(3n+4),
+  .medium_list > ul > li:nth-child(2n+2)            {clear:left;}
+  .one_tenth,
+  .one_ninth,
+  .one_eighth,
+  .one_seventh,
+  .one_sixth,
+  .one_fifth,
+  .one_quarter,
+  .one_third,
+  .two_fifth,
+  .medium,
+  .three_fifth,
+  .two_third,
+  .three_quarter,
+  .four_fifth                                       {width:100% !important;}
+  .block_fraction > div .block_content,
+  .block_fraction > ul > li .block_content,
+  [class$=_list] > ul > li .block                   {margin:.2em !important;}
+  .block_fraction.block_separator,
+  .block_separator .block_content                   {margin:0 !important;border:none !important;}
+  .nav_anchor                                       {overflow:hidden;padding:1em;top:auto;bottom:0;left:0;background:#ccc;background:rgba(0,0,0,0.3);}
+  .nav_anchor li                                    {display:inline-block;}
+}
+
+/* Tablet portrait */
+@media only screen and (max-width:768px) {
+  body {}
+  body                                              {font-size:120%;}
+  a,p                                               {word-wrap:break-word;}
+  .nav_main ul,
+  .nav_footer ul,
+  .nav_main li,
+  .nav_footer li                                    {display:block;margin:0;width:100%;}
+  .form-item input,
+  .form-item textarea                               {width:99%;}
+  select,
+  .form-item select                                 {width:100%;}
+  label,
+  form .description,
+  input[type=url],
+  input[type=text],
+  input[type=email],
+  input[type=password]                              {clear:both;float:none;width:99%;}
+}

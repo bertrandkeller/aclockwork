@@ -1,0 +1,144 @@
+/* --------------------------------------------------------------
+
+   forms.css
+   * Sets up some default styling for forms
+   * Gives you classes to enhance your forms
+
+   Usage:
+   * For text fields, use class .title or .text
+   * For inline forms, use .inline (even when using columns)
+
+-------------------------------------------------------------- */
+
+/* Input class for IE */
+/*--------------------------------------------------------------
+input[type=text]      = input.text
+input[type=password]  = input.password
+input[type=checkbox]  = input.checkbox
+input[type=radio]     = input.radio
+input[type=submit]    = form-submit
+input[type=button]    = form-button
+input[type=image]     = form-image
+input[type=file]      = input.file
+-------------------------------------------------------------- */
+
+
+/* form layout */
+/*------------------------------------------------*/
+
+form                                                  {.overflow();width:auto;padding:0 0 10px;}
+
+/* form element */
+fieldset ul,                                             
+fieldset ol                                           {.overflow();margin:0;padding:0;list-style:none;}
+fieldset ol li,                                      
+fieldset ol li div                                    {display:inline-block;}
+fieldset li,                                         
+.form-item                                            {float:left;clear:both;padding:0;margin:0;width:99%;list-style:none;}
+fieldset span                                         {display:block;vertical-align:top;}
+fieldset .resizable-textarea span                     {display:inline;}
+                                                     
+/* form fieldset */                                  
+fieldset fieldset                                     {border:none;margin:3px 0 0;}
+fieldset fieldset label                               {float:left;display:block;width:auto;}
+.illustration                                         {float:none;display:inline-block;vertical-align:top;}
+                                                     
+/* form checkbox and radio button */                 
+.form-radios,                                        
+.form-checkboxes                                      {float:left;}
+.form-radios .form-item,                             
+.form-checkboxes .form-item                           {padding:0 0 0.5em;}
+                                                           
+/* Form Time input */                                           
+.form_time label                                      {margin:5px 0 0;font-size:12px;text-transform:none;}
+.form_time input,                                     
+.form_time select                                     {width:50px;}
+
+.description                                          {margin:0 10px 5px 0;font-size:0.9em;color:#999;}
+form .description                                     {clear:both;float:right;width:@width_form_description;}
+
+
+/* form fields
+/*------------------------------------------------*/
+
+label                                                 {float:@float_label;display:block;position:relative;padding:0 1% 0 0;width:@width_label;min-height:10px;line-height:@fontsize_label + @fontsize_label/2;font-size:@fontsize_label;font-weight:@fontweight_label;vertical-align:top;color:@color_label;border:none;background:none;}
+fieldset                                              {margin: 0 0 1.5em 0;padding:0;}
+legend                                                {margin-top:-0.2em;margin-bottom:1em;width:100%;min-height:25px;font-weight:bold;font-size:1.4em;white-space:normal;}
+legend span                                           {margin:0 15px;white-space:normal;}
+.col2 fieldset legend                                 {margin:0 0 2px;}
+                                                      
+select                                                {background-color:#fff;border-width:1px;border-style:solid;} 
+input[type="search"]                                  {-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
+textarea                                              {float:left;display:block;overflow:auto;padding:5px;vertical-align:top;}
+                 
+input[type=url],                                     
+input[type=text],
+input[type=email],
+input[type=search],
+input[type=password]                                  {display:block;margin:0 0 5px 0;padding:.2em !important;font-size:@fontsize_input;line-height:@fontsize_input + @fontsize_input/2;font-family:@fontfamily_form;background-color:@background_input;border-style:solid;border-width:@borderwidth_input;border-color:@bordercolor_input;.border-radius(@borderradius_input);.box-shadow(@boxshadow_input);}                                          
+input.text,
+input.title,
+textarea,                                                 
+select                                                {display:block;margin:0 0 5px 0;padding:.2em !important;font-size:@fontsize_input;line-height:@fontsize_input + @fontsize_input/2;font-family:@fontfamily_form;background-color:@background_input;border-style:solid;border-width:@borderwidth_input;border-color:@bordercolor_input;.border-radius(@borderradius_input);.box-shadow(@boxshadow_input);}
+                                                      
+input[type=url]:focus,
+input[type=text]:focus,
+input[type=mail]:focus,
+input[type=search]:focus,
+input[type=password]:focus,
+input.text:focus,                                         
+input.title:focus,                                        
+textarea:focus                                        {border-color:@bordercolor_input_hover;.box-shadow(@boxshadow_input_hover);}                                                      
+
+
+/* form input width & height */
+/*------------------------------------------------*/
+                          
+.form-item input,
+.form-item textarea                                  {width:@width_input;}
+select,
+.form-item select                                    {width:@width_input + 1%;}
+textarea                                             {height:70px;}
+                                                   
+input[type=url],
+input[type=text],
+input[type=email],
+input[type=password]                                  {float:@float_input;width:@width_input;}
+input.text,                                          
+input.password                                        {float:@float_input;width:@width_input;}
+                                                      
+form input.title                                      {font-size:14em;}
+
+
+/* form checkbox and radio button
+/*------------------------------------------------*/
+
+.form-radios label,
+.form-checkboxes label                                {width:100%;font-weight:normal;line-height:@fontsize_input;cursor:pointer;}
+input[type=checkbox],                                     
+input[type=radio]                                     {box-sizing:border-box;margin:2px 10px 0 0;padding:0;width:auto;vertical-align:top;}
+input.checkbox,                                           
+input.radio                                           {box-sizing:border-box;margin:2px 5px 0 0;width:auto;vertical-align:top;}
+
+.validate,
+.form-button, 
+.form-submit                                          {float:right;}
+.form-required                                        {display:inline;}
+.col2 .validate                                       {margin-bottom:1.5em;}
+
+
+/* form upload */
+/*------------------------------------------------*/
+
+input[type=file],                               
+input[type=button]                                    {float:left;display:inline-block;margin:2px 0 0;width:auto;}
+input.file,                                     
+input.form-button                                     {float:left;display:inline-block;margin:2px 0 0;width:120px;/*for ie6*/}
+
+
+/* form error */
+/*------------------------------------------------*/
+
+.form-item input.error, 
+.form-item textarea.error, 
+.form-item select.error                               {border:1px solid @color_message_error;background:rgba(0, 0, 0, 0.05);}

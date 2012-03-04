@@ -1,0 +1,75 @@
+/* --------------------------------------------------------------
+
+   debug.css
+   * Debug stylesheet
+
+-------------------------------------------------------------- */
+
+/* Nav debug*/
+
+.nav_debug                                 {min-height:0px !important;list-style:none;position:fixed;bottom:50px;right:20px;z-index:100;}
+.nav_debug a                               {width:70px;}
+
+body.debug                                 {font-size:85%;font-family:Palatino,'Palatino Linotype','Book Antiqua',FreeSerif,Georgia,serif;background:#efefff;}
+body.debug .block_article                  {margin:12px 0 12px 0;padding:0 0 20px 0;border-bottom:#ccc 2px dashed;}
+
+body.debug .strike span,
+body.debug .block_context span             {background:#efefff;}
+
+body.debug .grid .col1,
+body.debug .grid .col2,
+body.debug .grid .col_aside                {background:rgba(173,216,230,0.8);}
+body.debug .grid .container_int            {overflow:hidden;margin:10px 0;padding:10px 0 0;background-color:#999;}
+body.debug .grid .col_main_int             {}
+body.debug .grid .container_int            {padding:20px 0 0;}
+body.debug .grid .col_content              {margin:20px 10px 0;}
+
+/* Navigation */
+body.debug .nav_main                       {background:#999;}
+
+body.debug .nameof                         {z-index:100;position:absolute;display:table;margin:0;padding:0;width:150px;height:50px;font-size:16px;color:#333;font-weight:bold;background:#000;background:transparent;border-radius:5px;}
+body.debug .nameof_content                 {display:table-cell;vertical-align:middle;text-align:center;}
+
+body.debug .widthof                        {z-index:100;position:absolute;margin:2px 10px;font-weight:bold;}
+  
+/* header & footer */
+body.debug header,
+body.debug footer                          {background:#555;}
+
+/* block */
+.pattern                                   {position:relative;margin:0 0 1em;height:16em;background:rgba(0,0,0,.2)}
+
+/* typography */
+body.debug .col_main h1                    {margin-top:10px;padding:8px 0 12px;border-bottom:5px solid #555;-moz-box-shadow:2px 2px 2px #fff;}
+body.debug .col_main h1,
+body.debug .col_aside h1,
+body.debug .col_main h2,
+body.debug .col_aside h2,
+body.debug .col_main h3,
+body.debug .col_aside h3,
+body.debug .col_main h4,
+body.debug .col_aside h4                  {color:#444;font-weight:bold;text-shadow:0 1px 0 white;}
+body.debug .col_main nav[class^=nav_] h2  {padding-bottom:3px;}
+
+body.debug code,
+body.debug xmp, 
+body.debug pre                            {padding:0 3px 2px;font-size:0.8em;font-family:Monaco, Andale Mono;border-radius:3px; }
+body.debug code,
+body.debug xmp                            {background:#fee9cc;color:rgba(0,0,0,0.75);padding:1px 3px;}
+body.debug h2 code                        {font-size:14px;}
+.code                                     {display:none;margin:10px 0;}
+body.debug .code                          {display:block;}
+body.debug .code code,
+body.debug .code xmp                      {display:block;margin:0 0 15px;}
+.code h3                                  {display:inline;margin-bottom:0;padding:5px;width:auto;font-size:14px;background:#fee9cc;}
+.code h3 a                                {text-decoration:none;}
+
+/* fraction */
+body.debug .grid [class$=_list]           {clear:both;overflow:hidden;}
+body.debug .grid .block_fraction .block,
+body.debug .grid [class$=_list] .block,
+body.debug .grid .block_separator .block  {min-height:50px;background:rgba(173,216,230,0.8);}
+body.debug .grid .block_separator         {margin-bottom:5px}
+
+/* table */
+body.debug table                          {background:#fff;border-top:2px #888 solid;border-bottom:2px #888 solid;}

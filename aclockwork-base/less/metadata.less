@@ -1,0 +1,76 @@
+/* --------------------------------------------------------------
+
+   metadata.css
+   * Declaration of metadata element
+
+-------------------------------------------------------------- */
+
+/* meta informations */
+/*------------------------------------------------*/
+
+[class^=hc]                                         {overflow:hidden;margin:0 0 1.5em;}
+[class^=hc] dt,
+[class^=hc] dd                                      {}
+[class^=hc] dt                                      {}
+[class^=hc] dd                                      {margin:0 0 0 0.5em;}
+[class^=hc] dt                                      {margin:0.5em 0 0;font-size:120%;}
+
+/* List margin */
+.section_main .date                                 {margin:0 0 0.2em;}
+
+/* tag & category */
+.tag                                                {#link > .metadata(@color_metadata_tag,@background_metadata_tag);}
+.category                                           {#link > .metadata(@color_metadata_category,@background_metadata_category);}
+
+/* time */
+.hour                                               {#link > .metadata(@color_metadata_hour);}
+.day                                                {#link > .metadata(@color_metadata_day);}
+.month                                              {#link > .metadata(@color_metadata_month);}
+.year                                               {#link > .metadata(@color_metadata_year);}
+.date                                               {#link > .metadata(@color_metadata_date);}
+
+.name                                               {#link > .metadata(@color_metadata_name);}
+.username                                           {#link > .metadata(@color_metadata_username);}
+
+/* hcard */
+.role                                               {#link > .metadata(@color_metadata_role);}
+.title                                              {#link > .metadata(@color_metadata_title);}
+.email                                              {#link > .metadata(@color_metadata_email);}
+.url                                                {#link > .metadata(@color_metadata_url);}
+.geo                                                {#link > .metadata(@color_metadata_geo);}
+
+/* organisation */
+.organisation                                       {#link > .metadata(@color_metadata_organization,transparent,block);}
+.organisation .organization_name                    {#link > .metadata(@color_metadata_organization_name);}
+.organisation .organization_unit                    {#link > .metadata(@color_metadata_organization_unit);}
+
+/* address */
+.address                                            {#link > .metadata(@color_metadata_address,transparent,block);}
+.address .streetaddress                             {#link > .metadata(@color_metadata_streetaddress);}
+.address .locality                                  {#link > .metadata(@color_metadata_locality);}
+.address .region                                    {#link > .metadata(@color_metadata_region);}
+.address .postalcode                                {#link > .metadata(@color_metadata_postalcode);}
+.address .countryname                               {#link > .metadata(@color_metadata_countryname);}
+
+/* telephone */
+.telephone                                          {#link > .metadata(@color_metadata_telephone,transparent,block);}
+.telephone .telephone_number                        {#link > .metadata(@color_metadata_telephone_number);}
+.telephone .telephone_type                          {#link > .metadata(@color_metadata_telephone_type);}
+
+/* hevent */
+.duration                                           {#link > .metadata(@color_metadata_duration);}
+.ressources                                         {#link > .metadata(@color_metadata_ressources);}
+.source                                             {#link > .metadata(@color_metadata_source);}
+
+/* statistics */
+.stat_views                                         {#link > .metadata(@color_metadata_stats_views);}
+.stat_members                                       {#link > .metadata(@color_metadata_stats_members);}
+.stat_contacts                                      {#link > .metadata(@color_metadata_stats_contacts);}
+.stat_followers                                     {#link > .metadata(@color_metadata_stats_followers);}
+.stat_participations                                {#link > .metadata(@color_metadata_stats_participations);}
+
+/* metadata in a list */
+.section_context .stat_contacts,
+.section_context .stat_contacts a,
+.section_context .stat_members,
+.section_context .stat_members a                    {font-size:160%;}

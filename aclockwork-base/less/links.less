@@ -1,0 +1,100 @@
+
+
+/* links general
+/*------------------------------------------------*/
+
+a                                                   {#link > .link();}
+/*p a:visited                                         {color:saturate(@color_a,20%);}*/
+a:focus                                             {outline:thin dotted;/*Addresses outline displayed oddly in Chrome*/}
+a:hover,
+a:active                                            {outline:0;/*Improves readability when focused and also mouse hovered in all browsers * people.opera.com/patrickl/experiments/keyboard/test*/}
+
+
+/* mouse cursor
+/*------------------------------------------------*/
+
+a[href],
+label[for],
+input[type="reset"],
+input[type='image'],
+input[type='submit'],
+html input[type="button"]                           {cursor:pointer;}
+html input[type="button"]                           {-webkit-appearance:button;}
+a,
+select,
+button,
+.pointer,
+.form-submit                                        {cursor:pointer;}
+
+
+/* top page */
+/*------------------------------------------------*/
+
+.toppage                                            {position:absolute;top:15px;right:10px;}
+
+
+/* skip links */
+/*------------------------------------------------*/
+.nav_skiplink                                       {margin:0;padding:0 0 3px;border-bottom:#000 2px solid;background:#444;}
+.nav_skiplink ul                                    {margin:0;padding:0;}
+.nav_skiplink ul li                                 {display:inline;padding:0 5px 0 0;} 
+.nav_skiplink ul li a                               {font-size:0.8em;color:#fff;}
+.js .nav_skiplink                                   {height:0;overflow:hidden;width:0;padding:0;}
+.js .nav_skiplink.accessibility_on                  {height:auto;width:auto;padding:0;}
+.link_skipped:target .col_content                   {background:lime;}
+
+
+/* pagination_more */
+/*------------------------------------------------*/
+.pagination_more                                    {display:block;clear:both;overflow:hidden;width:100%;height:30px;line-height:30px;font-weight:bold;text-align:center;color:#fff;background:#999;}
+.pagination_more a,
+.pagination_more span                               {font-weight:bold;color:#fff;}
+
+
+/* external link */
+/*------------------------------------------------*/
+
+a.link-external,
+a.link-external:hover,
+a.link-external:focus,
+a.link-external:active                              {padding-right:13px;background:url(@background_external_link) 100% -501px no-repeat;}
+
+a[href$=".pdf"]                                     {background-position:100% 0;}
+a[href$=".doc"],                                    
+a[href$=".docx"]                                    {background-position:100% -150px;}
+a[href$=".xls"],                                    
+a[href$=".xlsx"]                                    {background-position:100% -450px;}
+a[href$=".ppt"],                                    
+a[href$=".pptx"],                                   
+a[href$=".gif"]                                     {background-position:100% -250px;}
+a[href$=".bmp"]                                     {background-position:100% -200px;}
+a[href$=".tiff"],                                   
+a[href$=".jpg"],                                    
+a[href$=".jpeg"]                                    {background-position:100% -550px;}  
+a[href$=".png"],                                    
+a[href$=".eps"]                                     {background-position:100% -400px;}
+a[href$=".ai"],                                     
+a[href$=".indd"]                                    {background-position:100% -50px;}
+a[href$=".zip"]                                     {background-position:100% -350px;}
+a[href$=".swf"]                                     {background-position:100% -300px;}
+
+a[href$=".pdf"],
+a[href$=".doc"],
+a[href$=".docx"],
+a[href$=".xls"],
+a[href$=".xlsx"],
+a[href$=".ppt"],
+a[href$=".pptx"],
+a[href$=".gif"],
+a[href$=".bmp"],
+a[href$=".tiff"],
+a[href$=".jpg"],
+a[href$=".jpeg"],
+a[href$=".png"],
+a[href$=".eps"],
+a[href$=".ai"],
+a[href$=".indd"],
+a[href$=".zip"],
+a[href$=".swf"]                                     {padding-right:30px;background-image:url(@background_external_link);background-repeat:no-repeat;}
+
+.block_slider a.link-external                       {padding:0;background:none;}

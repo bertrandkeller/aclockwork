@@ -1,0 +1,31 @@
+
+/* navigation */
+/*------------------------------------------------*/
+
+.nav_step                                           {behavior:url(../js/display-table.min.htc);}
+
+/* external link */
+/*------------------------------------------------*/
+
+a.link-external.document-pdf                        {background-position:100% 0;}
+a.link-external.document-doc                        {background-position:100% -150px;}
+a.link-external.document-gif                        {background-position:100% -250px;}
+a.link-external.document-docx                       {background-position:100% -150px;}
+a.link-external.document-xls                        {background-position:100% -450px;}
+a.link-external.document-zip                        {background-position:100% -350px;}
+a.link-external.document-indd                       {background-position:100% -50px;}
+a.link-external.document-bmp                        {background-position:100% -200px;}
+a.link-external.document-eps                        {background-position:100% -400px;}
+a.link-external.document-swf                        {background-position:100% -300px;}
+a.link-external.document-jpg                        {background-position:100% -550px;}
+
+a.link-external.document-,   
+a.link-external.document-gif,   
+a.link-external.document-docx,  
+a.link-external.document-xls,   
+a.link-external.document-zip,   
+a.link-external.document-indd,  
+a.link-external.document-bmp,   
+a.link-external.document-eps,   
+a.link-external.document-swf,   
+a.link-external.document-jpg                        {padding-right:30px;}

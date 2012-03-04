@@ -1,0 +1,52 @@
+/* --------------------------------------------------------------
+
+   reset.css + normalize.css
+   * Reset and some basic styles  
+
+-------------------------------------------------------------- */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
+article, aside, dialog, figure, footer, header, hgroup, nav, section {display:block;}
+
+
+body {margin:0;/*Addresses margins handled incorrectly in IE6/7*/line-height:1.5;}
+* html body * {overflow:visible;}
+* html iframe, * html frame {overflow:auto;}
+* html frameset {overflow:hidden;}
+html {font-size:100%;/*text resizing oddly in IE6/7 when body font-size is set using em units*/overflow-y:scroll;/*Keeps page centred in all browsers*/-webkit-text-size-adjust: 100%;/*iOS text size adjust*/-ms-text-size-adjust:100%;/*iOS text size adjust*/}
+
+[hidden] {display:none;}
+
+table {border-collapse:separate;border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;}
+table, td, th {vertical-align:middle;}
+
+legend {border:0;/*Corrects color not being inherited in IE6/7/8/9*/*margin-left:-7px !important;/*Corrects alignment displayed oddly in IE6/7*/}
+button,
+input,
+select,
+textarea {font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle;}
+button,
+input {line-height:normal;*overflow:visible;}
+option {padding-left:0.4em; background-color:#fff;} /* LTR */
+select {padding:1px;}
+button::-moz-focus-inner,
+input::-moz-focus-inner {border:0;padding:0;/*Corrects inner padding and border displayed oddly in FF3/4*/}
+input[type="search"]::-webkit-search-decoration {-webkit-appearance:none;}
+
+audio,canvas,video {display:inline-block;*display:inline;*zoom:1;}
+audio:not([controls]) {display: none;/*Prevents modern browsers from displaying 'audio' without controls*/}
+figure {overflow:hidden;}
+figure img {}
+
+fieldset, img {border:0 solid;}
+
+ul, ol, dl {margin:0 0 1em 1em;} /* LTR */
+li {line-height:1.5em;margin-left:0.8em; /* LTR */}
+
+dt {font-weight:bold;}
+dd {margin:0 0 1em 0.8em;} /* LTR */
+
+blockquote {margin:0 0 1em 0.8em;}
+
+blockquote:before, blockquote:after, q:before, q:after {content:"";}
+blockquote, q {quotes:"" "";}

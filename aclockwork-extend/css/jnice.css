@@ -1,0 +1,92 @@
+/* -------------
+ * Radios
+ * ------------- */
+.jRadioWrapper { float: left; z-index: 2; }
+.jNiceRadio {
+	background: transparent url(../images/form_radio.gif) no-repeat center top;
+	height: 18px;
+	width: 18px;
+	position:absolute;left:0px;top:0px;cursor:pointer;vertical-align:middle;
+	outline:none;
+}
+
+/* -------------
+ * Checkboxes
+ * ------------- */
+.jNiceCheckbox {
+	background: transparent url(../images/form_checkbox.gif) no-repeat center 4px;
+	height: 18px;
+	width: 18px;
+	position:absolute;left:0px;top:0px;z-index:2;cursor:pointer;
+}
+
+.input[type=checkbox],
+.jNiceWrapper,
+.jNiceCheckbox,
+.jNiceCheckbox a,
+.jNiceCheckbox:focus,
+.form-checkboxes label,
+.form-checkboxes label:focus,
+.jNiceCheckbox::-moz-focus-inner {outline:none;border:0;-moz-appearance:none;}
+
+/* -------------
+ * Checked - Used for both Radio and Checkbox
+ * ------------- */
+.jNiceChecked { background-position: center -13px;}
+
+/* -------------
+ * Selects
+ * ------------- */
+.jNiceWrapper select {border:none;margin:0;padding:0;}
+
+.jNiceSelectWrapper {
+	height: 17px;
+	left:0px;top:0px;z-index:3;position:absolute;
+}
+
+.jNiceWrapper iframe {position:absolute;z-index:1;width:100%;left:0px;top:0px;}
+
+.jNiceSelectText {
+	overflow:hidden;float:none;position:absolute;z-index:100;line-height:1.3em;cursor:pointer;
+}
+form .jNiceSelectText {
+  padding:3px 2px 3px 5px !important;
+}
+
+.jNiceSelectWrapper .jNiceSelectOpen {
+	width:21px;
+	height:19px;
+	background: url(../images/form_select_right.gif) no-repeat center center;
+	z-index:100;display:block;position:absolute;right:0px;
+	top:1px;
+	right:16px;
+}
+
+.jNiceSelectWrapper ul {
+	top:22px;
+	background-color:#FFF;
+	border:solid 1px #CCC;
+	min-height:10px;
+	position:absolute;left:0px;list-style:none;display:none;margin:0;padding:0 7px 0 0;overflow-y:auto;z-index:100;width:100%;
+}
+
+.jNiceSelectWrapper ul li {
+	width:102.5%;
+	margin:0;
+}
+
+.jNiceSelectWrapper ul a {
+	background-color: #FFF;
+	display:block;padding:5px;text-decoration:none;
+	font-weight:normal;
+}
+
+.jNiceSelectWrapper ul a:hover { background:#aaa !important; }
+.jNiceSelectWrapper ul a.selected { font-weight:bold;background:#EDEDED; }
+
+.jNiceFocus { border: dotted 1px #666666; }
+
+.jNiceHidden {opacity:0;z-index:-1;position:relative;}
+.jNiceWrapper {float:left;position:relative;margin:0;vertical-align:top;}
+.jNiceWrapperSelect {position:relative;vertical-align:top;float:left;width:480px;}
+.jNiceWrapper input {outline:none;moz-outline:none;}

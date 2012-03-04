@@ -1,0 +1,123 @@
+/* --------------------------------------------------------------
+
+   list.css
+   * Content & activity list
+
+-------------------------------------------------------------- */
+
+
+[class$=_list] .section_aside img                      {margin:0;}
+
+.pane                                                  {background:#444;}
+.pane .slider                                          {background:#111;}
+.pane                                                  {background:none repeat scroll 0 0 rgba(0, 0, 0, 0.25);width:10px;} 
+.pane .slider                                          {margin:0 1px;position:relative;background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);border-radius:3px 3px 3px 3px;} 
+.pane.active                                           {visibility:visible;} 
+.pane                                                  {-moz-transition:all 0.2s ease 0s;border-radius:5px 5px 5px 5px;opacity:0.01;} 
+.pane.active                                           {opacity:1;}
+
+.nano                                                  {.scroll();height: 80px;overflow: hidden;position: relative;width: 100%;border:1px solid;}
+.nano .content                                         { bottom: 0; left: 0; overflow-x: hidden; overflow-y: scroll; position: absolute; right: 0; top: 0; }
+
+
+/* vertical and horizontal list */
+/*------------------------------------------------*/
+
+.vlist ul,.vlist ol,
+.hlist ul,.hlist ol                                   {margin:0;padding:0;list-style:none;}
+.vlist li,
+.hlist li                                             {margin:0;padding:0;}
+.vlist li                                             {clear:both !important;}
+.hlist li                                             {float:left !important;*height:1%;_height:1%;}
+.vlist a,
+.hlist a                                              {display:block;padding:5px;}
+.vlist a:hover,
+.hlist a:hover                                        {text-decoration:underline;}
+
+
+/* fraction list */
+/*------------------------------------------------*/
+
+[class^=list_column_]                                 {}
+[class^=list_column_] li                              {margin:0;}
+
+.list_column_medium                                   {.column(2)}
+.list_column_third                                    {.column(3)}
+.list_column_quarter                                  {.column(4)}
+.list_column_fifth                                    {.column(5)}
+.list_column_sixth                                    {.column(6)}
+
+                                         
+/* activity block list */
+/*------------------------------------------------*/
+
+/* Activity simple list */
+.col1 .list_activity.block                           {border:none;}
+.list_activity,
+.list_activity > ul,
+.list_activity .element_list                         {.overflow();margin:0;padding:0;}
+.list_activity .item-list ul li,
+.list_activity > ul > li,
+.list_activity .element                              {clear:both;.overflow();list-style:none;margin:0;padding:0.5em 0 0.3em;border-bottom:1px solid #ccc;}
+.list_activity li ul,
+.list_activity .element ul                           {padding:0 0 0 0.8em;}
+.list_activity li li,
+.list_activity .element li,
+.list_activity .element .element                     {clear:none;margin:0 0 0 0.8em;padding:0;list-style:disc;border:none !important;}
+
+.list_activity .block                                {margin:0;}
+.list_activity p                                     {margin:0;}
+.list_activity .section_aside img                    {clear:both;margin-bottom:.3em;}
+
+.col2 .list_activity li,
+.col2 .list_activity .element                        {margin-left:0;margin-right:0;}
+
+.list_activity li:last-child,
+.list_activity .element:last-child                   {border:none;}
+.list_activity li.last,
+.list_activity .element.last                         {border:none;}
+  
+/* Column 2 */
+.col2 .list_activity .section_aside                  {float:left;}
+
+
+/* outline block list */
+/*------------------------------------------------*/
+
+.list_outline ul                                     {margin:0;padding:0;}
+.list_outline li                                     {margin:0 0 1em;padding:0;list-style:none;border:none;}
+.list_outline li .block                              {overflow:visible;padding:0;min-height:70px;border:#999 1px solid !important;background:#fff;}
+.list_outline li .content                            {margin:5px;}
+.list_outline li .section_main                       {padding:5px}
+
+
+/* list full & mosaic */
+/*------------------------------------------------*/
+
+/* switch link */
+.flip                                                 {color:red;}
+.listclickable:hover .block                           {background:#e1e1e1;}
+
+/* full width list */
+.list_full ul,
+.list_full li                                         {margin:0;padding:0;list-style:none;}
+.list_full .block                                     {margin:0;padding:10px 0;}
+.list_full .section_aside                             {float:left;}
+.list_full .section_main                              {display:block;}
+.list_full .block_content                             {float:left;.overflow();width:60%;}
+.list_full .section_context                           {float:right;.overflow();width:30%;}
+.list_full .section_context .cancel,
+.list_full .section_context .access                   {float:right;margin:0 0 0 10px;}
+
+/* mosaic list */
+.list_mosaic li,
+.list_mosaic .element                                 {float:left;clear:none;min-height:100px;}
+.list_mosaic .block                                   {border:#999 1px solid;}
+.list_mosaic .section_aside                           {float:left;margin-left:5px;}
+.list_mosaic .section_aside,
+.list_mosaic .section_main                            {margin:9px 8px 8px 5px;}
+.list_mosaic .block_content                           {float:left;margin:5px 5px 0 0 !important;}
+.list_mosaic .section_context                         {float:left;clear:both;width:auto;}
+.list_mosaic p                                        {margin:0;}
+.list_mosaic .section_context .cancel,
+.list_mosaic .section_context .access                 {float:right;margin:0 10px 0 0;}

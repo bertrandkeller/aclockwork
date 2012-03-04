@@ -1,0 +1,32 @@
+/* --------------------------------------------------------------
+
+   alert.css
+   * Style for alert and error
+
+-------------------------------------------------------------- */
+
+/* success,info,notice and error/alert boxes */
+/*--------------------------------------------------------------*/
+
+.message                                        {margin-bottom:1em;padding:0.8em;}
+
+.error                                          {#information > .message(@color_message_error);}
+.warning                                        {#information > .message(@color_message_warning);}
+.notice                                         {#information > .message(@color_message_notice);}
+.success                                        {#information > .message(@color_message_success);}
+.info                                           {#information > .message(@color_message_info);}
+
+
+/* alert boxes */
+/*--------------------------------------------------------------*/
+
+.alert                                          {margin-bottom:1em;padding:0.8em;border-width:@borderwidth_message_alert;border-style:solid;text-shadow:@textshadow_alert;.border-radius(@borderradius_message);}
+                                                
+.alert.error                                    {#information > .alert(@color_message_error);}
+.alert.warning                                  {#information > .alert(@color_message_warning);}
+.alert.notice                                   {#information > .alert(@color_message_notice);}
+.alert.success                                  {#information > .alert(@color_message_success);}
+.alert.info                                     {#information > .alert(@color_message_info);}
+                                                
+.alert .close                                   {float:right;margin-top:-2px;font-size:20px;font-weight:bold;text-decoration:none;text-shadow:0 1px 0 #fff;color:#333 !important;}
+.alert .close:hover                             {text-decoration:none;text-shadow:none;color:#000 !important;}

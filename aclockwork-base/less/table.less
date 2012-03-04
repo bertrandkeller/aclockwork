@@ -1,0 +1,69 @@
+/* --------------------------------------------------------------
+
+   table.css
+   * basic table
+
+-------------------------------------------------------------- */
+
+
+table                                 {border-collapse:collapse;margin-bottom:1.5em;}
+
+table.full                            {width:100%;}
+table.fixed                           {table-layout:fixed;}
+
+table th,
+table td,
+table caption                         {padding:@padding_td;vertical-align:middle;}
+table caption                         {font-variant:small-caps;}
+
+table thead th,
+table tbody tr                        {height:@height_tr;}
+
+table thead th                        {font-weight:bold;color:@color_thead_th;background:@background_thead_th;}
+table tbody th                        {font-weight:bold;color:@color_tbody_th;background:@background_tbody_th;text-align:left;}
+table thead th                        {border-bottom-width:@borderwidth_th;border-color:@bordercolor_th;border-style:solid;}
+table tbody tr                        {border-bottom-width:@borderwidth_tr;border-color:@bordercolor_tr;border-style:solid;}
+                                      
+table .empty,
+table th:empty                        {border:none;background:transparent;}
+
+/* table content */
+table img,                            
+table .illustration img               {padding:0;border:1px solid;vertical-align:middle;}
+
+/* table link */
+table thead a,                        
+table thead a:focus,                  
+table thead a:hover,                  
+table thead a:active,                 
+table thead a:visited                 {color:@color_thead_th;}
+table thead th a                      {text-decoration:none;}
+table tbody a                         {text-decoration:underline;}
+
+
+/* board */
+/*------------------------------------------------*/
+
+.board ul                             {float:right;margin:0;padding:0;}
+.board li                             {float:left;list-style:none;margin:0 5px 0 0;}
+
+
+/* zebra */
+/*------------------------------------------------*/
+
+.zebra tbody tr:nth-child(even),
+.zebra tbody tr.even td               {background:@color_tr_even;}
+.zebra tbody tr:hover th[scope="row"],
+.zebra tbody tr:hover tbody th.sub    {background:none;}
+.zebra tbody tr:hover                 {background:@color_tr_hover;}
+
+
+/* mail */
+/*------------------------------------------------*/
+
+.mailbox td h3                        {margin:0;}
+.mailbox tbody tr:nth-child(even) td, 
+.mailbox tbody tr.even td             {background:none;}
+.mailbox .unread                      {background:@color_tr_mailbox_unread;}
+.mailbox .mailboxhover                {background:@color_tr_mailbox_hover;}
+.mailboxclickable .mailboxsubject a   {text-decoration:none;color:#000;}
