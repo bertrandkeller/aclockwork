@@ -55,3 +55,14 @@ abbr[title]:after {
 }
 
 .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {content: ""}  /* Don't print links for images, javascript or internal links */
+
+[class^=nav_],.hlist,.vlist,
+form,.breadcrumb,.toppage,
+.access,.action,.submit,.more {
+  display:none;
+}
+
+.list_activity li,
+[class$=_list] > ul > li {
+  list-style:none;
+}

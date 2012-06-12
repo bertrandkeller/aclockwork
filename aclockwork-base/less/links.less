@@ -30,17 +30,17 @@ button,
 /* top page */
 /*------------------------------------------------*/
 
-.toppage                                            {position:absolute;top:15px;right:10px;}
+.toppage                                            {}
 
 
 /* skip links */
 /*------------------------------------------------*/
-.nav_skiplink                                       {margin:0;padding:0 0 3px;border-bottom:#000 2px solid;background:#444;}
+.nav_skiplink                                       {margin:0;padding:0 0 3px;background:#444;}
 .nav_skiplink ul                                    {margin:0;padding:0;}
 .nav_skiplink ul li                                 {display:inline;padding:0 5px 0 0;} 
 .nav_skiplink ul li a                               {font-size:0.8em;color:#fff;}
-.js .nav_skiplink                                   {height:0;overflow:hidden;width:0;padding:0;}
-.js .nav_skiplink.accessibility_on                  {height:auto;width:auto;padding:0;}
+.js .nav_skiplink                                   {overflow:hidden;width:0;height:0;min-height:0;padding:0;}
+.js .nav_skiplink.accessibility_on                  {width:auto;height:auto;padding:0;}
 .link_skipped:target .col_content                   {background:lime;}
 
 

@@ -13,29 +13,38 @@
   });
   
   $('#nav_debug').find('p.debug a').live('click', function() {
+    
      if ( $.cookie('modeldebug') == 'debug' ) {
          $('body').toggleClass("debug");
          $.cookie('modeldebug','normal');
      } 
      else {
-        $('body').toggleClass("debug");
-        var widthselector = $('.debug .grid .col_main section[class^=col],.debug .grid aside[class^=col]') ;
-        var nameselector = $('.debug .grid .block_fraction > div,.debug .grid [class$=_list]') ;
-        widthselector.live('mouseenter',function () {
-          var colwidth = $(this).width();       
-          $(this).prepend('<span class="widthof"><span class="widthof_content">' + colwidth + 'px </span></span>');
-        });
-        widthselector.live('mouseleave',function () {
-          $('.widthof').remove();
-        });
-        nameselector.live('mouseenter',function () {
-           var classname = $(this).attr('class').split(" ")[0];            
-           $(this).prepend('<span class="nameof"><span class="nameof_content">.' + classname + '</span></span>');
-        });
-        nameselector.live('mouseleave',function () {
-          $('.nameof').remove();
-        });
+        debug();
         $.cookie('modeldebug', 'debug');
      }
    });
+   
+   if ( $.cookie('modeldebug') == 'debug' ) {
+       debug();
+   } else if ( $.cookie('modeldebug') == 'normal' ) {}
+   
+   function debug () {
+     $('body').toggleClass("debug");
+     var widthselector = $('.debug .grid .col_main section[class^=col],.debug .grid aside[class^=col]') ;
+     var nameselector = $('.debug .grid .block_fraction > div,.debug .grid [class$=_list]') ;
+     widthselector.live('mouseenter',function () {
+       var colwidth = $(this).width();       
+       $(this).prepend('<span class="widthof"><span class="widthof_content">' + colwidth + 'px </span></span>');
+     });
+     widthselector.live('mouseleave',function () {
+       $('.widthof').remove();
+     });
+     nameselector.live('mouseenter',function () {
+        var classname = $(this).attr('class').split(" ")[0];            
+        $(this).prepend('<span class="nameof"><span class="nameof_content">.' + classname + '</span></span>');
+     });
+     nameselector.live('mouseleave',function () {
+       $('.nameof').remove();
+     });
+   }
 })(jQuery);

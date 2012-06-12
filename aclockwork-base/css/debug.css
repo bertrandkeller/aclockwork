@@ -40,7 +40,7 @@ body.debug footer                          {background:#555;}
 .pattern                                   {position:relative;margin:0 0 1em;height:16em;background:rgba(0,0,0,.2)}
 
 /* typography */
-body.debug .col_main h1                    {margin-top:10px;padding:8px 0 12px;border-bottom:5px solid #555;-moz-box-shadow:2px 2px 2px #fff;}
+body.debug .col_main h1                    {margin-top:10px;padding:8px 0 12px;border-bottom:5px solid #555;-moz-box-shadow:0px 2px 0px #fff;}
 body.debug .col_main h1,
 body.debug .col_aside h1,
 body.debug .col_main h2,

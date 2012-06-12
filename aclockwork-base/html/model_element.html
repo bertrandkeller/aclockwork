@@ -7,13 +7,13 @@
       // TipTip - Tooltip 
       head.ready(function() {
         $("a.tooltip,form .form-required").tipTip({defaultPosition: "right"});
-        $("#nav_pagination a").tipTip({defaultPosition: "bottom"});
+        $("#nav_pagination a,a.tooltip-bottom").tipTip({defaultPosition: "bottom"});
         $("#nav_tabs ul").idTabs();
         $("#nav_tabs_feed ul").idTabs();
       });
       // View
       head.ready(function(){
-        $('#nav_anchor').onePageNav();
+        $('#nav_anchor_onepage').onePageNav();
         $('table.mailbox tbody td').biggerlink({clickableclass:'mailboxclickable',hoverclassparent:'mailboxhover'});
         $('#js-list-view li').biggerlink({clickableclass:'listclickable',otherstriggermaster:false});
         $('.block_gallery img').jcaption({
@@ -22,11 +22,6 @@
            show: {height: "show"},
            hide: {height: "hide"}
          });
-      });
-      head.ready(function(){
-        $("a").click(function(event) {
-          event.preventDefault();
-        });
       });
       head.ready(function(){
         prettyPrint();
@@ -54,7 +49,7 @@
   <section class="col1">
     <div class="col_content">
       
-      <ul id="nav_anchor" class="nav_anchor" role="navigation">
+      <ul id="nav_anchor_onepage" class="nav_anchor onepage" role="navigation">
         <li class="current"><a href="#top">En-tête</a></li>
         <li><a href="#navigation">Navigation</a></li>
         <li><a href="#content">Content</a></li>
@@ -720,16 +715,20 @@
           </ul>
           
           <h3>Microdata Event</h3>
-          <div class="hcalendar" itemscope itemtype="http://microformats.org/profile/hcalendar#vevent">
+          <div class="hcalendar" itemscope itemtype="http://schema.org/Event">
             <dl>
               <dt>Class :</dt>
               <dd><span itemprop="class" class="class">public / private / confidential</span></dd>
+              <dt>Title :</dt>
+              <dd><span itemprop="name">Great event of ever</span></dd>
               <dt>Summary :</dt>
-              <dd><span itemprop="summary">Agency anniversary</span></dd>
+              <dd><span itemprop="description">Agency anniversary</span></dd>
+              <dt>Performer :</dt>
+              <dd><span itemprop="performers">Agency anniversary</span></dd>
               <dt>Date :</dt>
               <dd>
-                <data itemprop="dtstart" datetime="2009-05-05T19:00:00Z" class="date">friday May 5th @ 7pm</data> to
-                <data itemprop="dtend" datetime="2009-05-05T21:00:00Z" class="date">9pm</data>
+                <data itemprop="startDate" datetime="2009-05-05T19:00:00Z" class="dtstart">friday May 5th @ 7pm</data> to
+                <data itemprop="endDate" datetime="2009-05-05T21:00:00Z" class="dtend">9pm</data>
               </dd>
               <dt>Duration :</dt>
               <dd><span itemprop="duration" class="duration">1 night</span></dd>
@@ -744,12 +743,12 @@
               <dt>URL :</dt>
               <dd><a href="http://livebrum.co.uk/2009/05/05/bluesday-tuesday-money-road" rel="bookmark" itemprop="url" class="url">http://www.lanetscouade.com</a></dd>
               <dt>Last modified :</dt>
-              <dd><span itemprop="last-modified ">12 septembre 2011</span></dd>
+              <dd><span itemprop="last-modified" class="date">12 septembre 2011</span></dd>
             </dl>
           </div>
           
           <h3>Microdata Address</h3>
-          <div class="hcard" itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
+          <div class="hcard" itemscope itemtype="http://schema.org/Person">
             <dl>
               <dt>Name :</dt>
               <dd>
@@ -761,28 +760,27 @@
                 </span>
               </dd>
               <dt>Birthday :</dt>
-              <dd><data itemprop="bday" datetime="10975-04-05T19:00:00Z" class="date">18 april 1975</data></dd>
+              <dd><data itemprop="birthDate" datetime="10975-04-05T19:00:00Z" class="date">18 april 1975</data></dd>
               <dt>Organisation :</dt>
               <dd>
-                <span itemprop="org" class="organisation">
-                  <strong>Organisation name :</strong> <span itemprop="organization-name" class="organization_name"><a href="#">La Netscouade</a></span> -
-                  <strong>Organisation unit :</strong> <span itemprop="organization-unit" class="organization_unit"><a href="#">La Rédaction</a></span>
+                <span itemscope itemtype="http://schema.org/Organization">
+                  <strong>Organisation name :</strong> <span itemprop="name" class="organization-name"><a href="#">La Netscouade</a></span>
                 </span>
               </dd>
               <dt>Title :</dt>
-              <dd><span itemprop="title" class="title"><a href="#">Writer senior</a></span></dd>
+              <dd><span itemprop="jobTitle" class="title"><a href="#">Writer senior</a></span></dd>
               <dt>Role :</dt>
-              <dd><span itemprop="role" class="role"><a href="#">Grand chief of everything</a></span></dd>
+              <dd><span itemprop="jobRole" class="role"><a href="#">Grand chief of everything</a></span></dd>
               <dt>Address :</dt>
               <dd>
-                <span itemprop="adr" class="address">
-                  <strong>Street-address :</strong> <span itemprop="street-address" class="streetaddress"><a href="#">8 passage Brûlon</a></span> -
-                  <strong>Locality :</strong> <span itemprop="locality" class="locality"><a href="#">Paris</a></span> -
-                  <strong>Region :</strong> <span class="region"><a href="#">Ile de France</a></span> -
-                  <strong>Postal code :</strong> <span itemprop="postal-code" class="postalcode"><a href="#">75012</a></span> -
-                  <strong>Country name :</strong> <span itemprop="country-name" class="countryname"><a href="#">France</a></span>
+                <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                  <strong>Street-address :</strong> <span itemprop="streetAddress" class="street-address"><a href="#">8 passage Brûlon</a></span> -
+                  <strong>Locality :</strong> <span itemprop="addressLocality" class="locality"><a href="#">Paris</a></span> -
+                  <strong>Region :</strong> <span itemprop="addressRegion" class="region"><a href="#">Ile de France</a></span> -
+                  <strong>Postal code :</strong> <span itemprop="postalCode" class="postal-code"><a href="#">75012</a></span> -
+                  <strong>Country name :</strong> <span itemprop="addressCountry" class="country-name"><a href="#">France</a></span>
                 </span><br />
-                <span itemprop="geo" class="geo" itemscope itemtype="http://data-vocabulary.org/Geo">
+                <span itemprop="geo" class="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
                     <meta itemprop="latitude" content="37.4149" />
                     <meta itemprop="longitude" content="-122.078" />
                   </span>
@@ -790,22 +788,22 @@
               <dt>Telephone :</dt>
               <dd>
                 <span itemprop="tel" itemscope class="telephone">
-                  <span itemprop="value" class="telephone_number"><a href="#">+1 (310) 555 3781</a></span> /
-                  <span class="telephone_type"><meta itemprop="type" content="work">agency phone</span> -
-                  <span itemprop="value" class="telephone_number"><a href="#">+1 (310) 786 4621</a></span> /
-                  <span class="telephone_type"><meta itemprop="type" content="home">home phone</span> -
-                  <span itemprop="value" class="telephone_number"><a href="#">+1 (310) 555 3782</a></span> /
-                  <span class="telephone_type"><meta itemprop="type" content="cell">mobile phone</span> -
-                  <span itemprop="value" class="telephone_number"><a href="#">+1 (310) 555 3784</a></span> /
-                  <span class="telephone_type"><meta itemprop="type" content="fax">fax</span> -
-                  <span itemprop="value" class="telephone_number"><a href="#">+1 (310) 555 3785</a></span> /
-                  <span class="telephone_type"><meta itemprop="type" content="video">video conference</span>
+                  <span itemprop="value" class="telephone-number"><a href="#">+1 (310) 555 3781</a></span> /
+                  <span class="telephone-type"><meta itemprop="type" content="work">agency phone</span> -
+                  <span itemprop="value" class="telephone-number"><a href="#">+1 (310) 786 4621</a></span> /
+                  <span class="telephone-type"><meta itemprop="type" content="home">home phone</span> -
+                  <span itemprop="value" class="telephone-number"><a href="#">+1 (310) 555 3782</a></span> /
+                  <span class="telephone-type"><meta itemprop="type" content="cell">mobile phone</span> -
+                  <span itemprop="value" class="telephone-number"><a href="#">+1 (310) 555 3784</a></span> /
+                  <span class="telephone-type"><meta itemprop="type" content="fax">fax</span> -
+                  <span itemprop="value" class="telephone-number"><a href="#">+1 (310) 555 3785</a></span> /
+                  <span class="telephone-type"><meta itemprop="type" content="video">video conference</span>
                 </span>
               </dd>
               <dt>Email :</dt>
               <dd><span itemprop="email" class="email"><a href="mailto:duchemain@lanetscouade.com">jean-pierre.duchemain.lanetscouade.com</a></span></dd>
               <dt>URL :</dt>
-              <dd><span itemprop="URL" class="url"><a href="#">http://www.lanetscouade.com</a></span></dd>
+              <dd><span itemprop="url" class="url"><a href="#">http://www.lanetscouade.com</a></span></dd>
             </dl>
           </div>
             
@@ -1243,31 +1241,40 @@
           <h2>Lignes divisées <code>.medium (50%)</code> <code>.one_third (33%)</code> <code>.one_quarter (25%)</code> <code>.one_fifth (20%)</code> <code>.one_sixth (16%)</code></h2>
           
           <div class="block_fraction">
-             <div class="medium"> 
+             <div class="medium">
+               <div class="block_content">
                 <div class="block">
-                  <p>Super texte de remplissage de texte pour le test de ma nouvelle grille</p>   
                 </div><!--/block-->
+               </div><!--/block_content--> 
              </div><!--medium-->
              <div class="medium"> 
+               <div class="block_content">
                  <div class="block">
                  </div><!--/block-->
+               </div><!--/block_content--> 
              </div><!--medium-->
           </div><!--block_fraction-->
           
-           <div class="block_fraction">
-               <div class="one_third"> 
+          <div class="block_fraction">
+             <div class="one_third"> 
+               <div class="block_content">
                   <div class="block">   
                   </div><!--/block-->
-               </div><!--one_third-->
-               <div class="one_third"> 
-                   <div class="block">
-                   </div><!--/block-->
-               </div><!--one_third-->
-               <div class="one_third"> 
-                    <div class="block">
-                    </div><!--/block-->
-                </div><!--one_third-->
-            </div><!--block_fraction-->
+                </div><!--/block_content--> 
+             </div><!--one_third-->
+             <div class="one_third"> 
+                <div class="block_content">
+                  <div class="block">   
+                  </div><!--/block-->
+                </div><!--/block_content--> 
+              </div><!--one_third-->
+              <div class="one_third"> 
+                <div class="block_content">
+                  <div class="block">   
+                  </div><!--/block-->
+                </div><!--/block_content--> 
+              </div><!--one_third-->
+          </div><!--block_fraction-->
             
           <div class="block_fraction">
             <div class="one_quarter"> 
@@ -1402,28 +1409,27 @@
             <h3>&lt;Code&gt;</h3>
                <xmp class="prettyprint linenums">
                  <div class="block_fraction">
-                      <div class="one_third"> 
-                        <div class="block_content">
-                         <div class="block">   
-                         </div><!--/block-->
-                       </div><!--/block_content--> 
-                      </div><!--one_third-->
-                      <div class="one_third"> 
-                         <div class="block_content">
-                          <div class="block">
-                          </div><!--/block-->
-                        </div><!--/block_content--> 
-                      </div><!--one_third-->
-                      <div class="one_third"> 
-                          <div class="block_content">
-                           <div class="block">
-                           </div><!--/block-->
-                         </div><!--/block_content--> 
-                       </div><!--one_third-->
-                   </div><!--block_fraction-->
+                    <div class="one_third"> 
+                      <div class="block_content">
+                       <div class="block">   
+                       </div><!--/block-->
+                      </div><!--/block_content--> 
+                    </div><!--one_third-->
+                    <div class="one_third"> 
+                      <div class="block_content">
+                        <div class="block">
+                        </div><!--/block-->
+                      </div><!--/block_content--> 
+                    </div><!--one_third-->
+                    <div class="one_third"> 
+                      <div class="block_content">
+                        <div class="block">
+                        </div><!--/block-->
+                      </div><!--/block_content--> 
+                    </div><!--one_third-->
+                 </div><!--block_fraction-->
                </xmp>
            </div>
-       
         </div><!--/block_article_content-->
       </article><!--/block_article-->
       
@@ -1603,25 +1609,25 @@
             <h3>&lt;Code&gt;</h3>
                <xmp class="prettyprint linenums">
                  <div class="block_fraction">
-                      <div class="one_third"> 
-                        <div class="block_content">
-                         <div class="block">   
-                         </div><!--/block-->
-                       </div><!--/block_content--> 
-                      </div><!--one_third-->
-                      <div class="one_third"> 
-                         <div class="block_content">
-                          <div class="block">
-                          </div><!--/block-->
-                        </div><!--/block_content--> 
-                      </div><!--one_third-->
-                      <div class="one_third"> 
-                          <div class="block_content">
-                           <div class="block">
-                           </div><!--/block-->
-                         </div><!--/block_content--> 
-                       </div><!--one_third-->
-                   </div><!--block_fraction-->
+                    <div class="one_third"> 
+                      <div class="block_content">
+                        <div class="block">   
+                        </div><!--/block-->
+                      </div><!--/block_content--> 
+                    </div><!--one_third-->
+                    <div class="one_third"> 
+                      <div class="block_content">
+                        <div class="block">
+                        </div><!--/block-->
+                      </div><!--/block_content--> 
+                    </div><!--one_third-->
+                    <div class="one_third"> 
+                      <div class="block_content">
+                        <div class="block">
+                        </div><!--/block-->
+                      </div><!--/block_content--> 
+                    </div><!--one_third-->
+                 </div><!--block_fraction-->
                </xmp>
            </div>
        
@@ -1648,26 +1654,26 @@
              </div><!--medium-->
           </div><!--block_fraction-->
           
-           <div class="block_fraction block_separator">
-               <div class="one_third"> 
-                 <div class="block_content">
-                  <div class="block">   
-                  </div><!--/block-->
-                </div><!--/block_content--> 
-               </div><!--one_third-->
-               <div class="one_third"> 
-                  <div class="block_content">
-                   <div class="block">
-                   </div><!--/block-->
-                 </div><!--/block_content--> 
-               </div><!--one_third-->
-               <div class="one_third"> 
-                   <div class="block_content">
-                    <div class="block">
-                    </div><!--/block-->
-                  </div><!--/block_content--> 
-                </div><!--one_third-->
-            </div><!--block_fraction-->
+          <div class="block_fraction block_separator">
+             <div class="one_third"> 
+               <div class="block_content">
+                <div class="block">   
+                </div><!--/block-->
+              </div><!--/block_content--> 
+             </div><!--one_third-->
+             <div class="one_third"> 
+                <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+             </div><!--one_third-->
+             <div class="one_third"> 
+               <div class="block_content">
+                 <div class="block">
+                 </div><!--/block-->
+               </div><!--/block_content--> 
+             </div><!--one_third-->
+          </div><!--block_fraction-->
             
           <div class="block_fraction block_separator">
             <div class="one_quarter"> 
@@ -1942,6 +1948,7 @@
         <div class="block_article_content">
           
           <h2>Formulaire</h2>
+          
           <p>Texte texte texte texte texte texte texte texte texte texte texte.</p>
           <form action="#" accept-charset="UTF-8" method="post" id="user-register" enctype="multipart/form-data">
           <div>
@@ -1950,27 +1957,26 @@
           		<div class="content">
                 <fieldset>
                   <legend>Vos coordonnées (legend)</legend>
-                  <div class="form-item" id="raison-wrapper">
-                    <label for="edit-raison">Raison sociale : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
-                    <input type="text" maxlength="128" name="prenom" id="edit-raison" size="60" value="" class="form-text required" />
+                  <div class="form-item">
+                    <label for="raison">Raison sociale : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+                    <input type="text" maxlength="128" name="prenom" id="raison" size="60" value="" class="form-text required" />
                   </div><!--/form-item-->
-                  <div class="form-item" id="address-company-wrapper">
-                    <label for="edit-address-company">Adresse : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
-                    <input type="text" maxlength="128" name="prenom" id="edit-address-company" size="60" value="" class="form-text required" />
+                  <div class="form-item">
+                    <label for="address-company">Adresse : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+                    <input type="text" maxlength="128" name="prenom" id="address-company" size="60" value="" class="form-text required" />
                   </div><!--/form-item-->
-                  <div class="form-item" id="zipcode-wrapper">
-                   <label for="edit-zipcode">Code postal : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
-                   <input type="text" maxlength="128" name="nom" id="edit-zipcode" size="30" value="" class="form-text required" />
+                  <div class="form-item">
+                   <label for="zipcode">Code postal : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+                   <input type="text" maxlength="128" name="nom" id="zipcode" size="30" value="" class="form-text required" />
                   </div><!--/form-item-->
                   <div class="form-item" id="town-wrapper">
-                   <label for="edit-town">Ville : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
-                   <input type="text" maxlength="64" name="mail" id="edit-town" size="60" value="" class="form-text required" />
-                   <div class="description">Description : Une adresse e-mail valide. Cette adresse vous servira à vous identifier sur la plateforme. Tous les messages du site seront envoyés à cette adresse.</div>
+                   <label for="town">Ville : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+                   <input type="text" maxlength="5" name="town" id="town" size="60" value="" class="form-text required" />
                   </div><!--/form-item-->
                 </fieldset>
                 
                 <fieldset>
-                  <legend>Votre profil : (legend)</legend>
+                  <legend>Votre choix : (legend)</legend>
                   <div class="form-checkboxes">
                     <div class="form-item">
                       <label for="profil1" class="option">
@@ -1996,10 +2002,10 @@
                 </fieldset>
                 
                 <fieldset>
-                  <legend>Autre profil (legend)</legend>
+                  <legend>Votre profil (legend)</legend>
                   
                   <label>Quel offres souhaitez vous ? <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
-                  <div class="form-radios">                            
+                  <div class  ="form-radios">                            
                     <div class="form-item">
                       <label for="offer_1" class="option">
                         <input type="radio" name="groupradio" class="form-radio processed" value="" id="offer_1">Offres grands publics
@@ -2012,41 +2018,48 @@
                     </div><!--/form-item-->
                   </div><!--/form-radios-->
                   <div class="form-item">
-                   <label for="edit-sex">Civilité : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
-                   <select name="sex" class="form-select required" id="edit-sex" ><option value="M">Monsieur</option><option value="F">Madame</option></select>
+                   <label for="sex">Civilité : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+                   <select name="sex" class="form-select required" id="sex" ><option value="M">Monsieur</option><option value="F">Madame</option></select>
                   </div><!--/form-item-->
                   <div class="form-item">
-                   <label for="edit-nom">Nom : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
-                   <input type="text" maxlength="128" name="nom" id="edit-nom" size="60" value="" class="form-text required" />
+                   <label for="nom">Nom : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+                   <input type="text" maxlength="128" name="nom" id="nom" size="60" value="" class="form-text required" />
                   </div><!--/form-item-->
                   <div class="form-item">
-                    <label for="edit-prenom">Prénom : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
-                    <input type="text" maxlength="128" name="prenom" id="edit-prenom" size="60" value="" class="form-text required" />
+                    <label for="prenom">Prénom : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+                    <input type="text" maxlength="128" name="prenom" id="prenom" size="60" value="" class="form-text required" />
                   </div><!--/form-item-->
                   <div class="form-item">
-                    <label for="edit-field-telephone-0-value">Numéro de téléphone : </label>
-                    <input type="text" name="field_telephone[0][value]" id="edit-field-telephone-0-value" size="60" value="" class="form-text text" />
+                   <label for="number">Votre âge : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+                   <input type="number" max="10" min="1" name="conf_number" id="number" size="60" value="" class="form-text required" />
+                  </div><!--/form-item-->
+                  <div class="form-item">
+                   <label for="date">Date : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+                   <input type="date" max="10" min="1" name="conf_date" id="date" size="60" value="" class="form-text required" />
+                  </div><!--/form-item-->
+                  <div class="form-item">
+                    <label for="telephone">Numéro de téléphone : </label>
+                    <input type="text" name="telephone" id="edit-field-telephone-0-value" size="60" value="" class="form-text text" />
                   <input type="hidden" name="name" id="edit-name" value="cc5809465ec0e974bab130940bd7fc54"  />
                   </div><!--/form-item-->
-                  
-                  <div class="form-item" id="edit-mail-wrapper">
-                   <label for="edit-mail">Adresse électronique : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
-                   <input type="email" maxlength="64" name="mail" id="edit-mail" size="60" value="" class="form-text required" />
+                  <div class="form-item">
+                   <label for="mail">Adresse électronique : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+                   <input type="email" maxlength="64" name="mail" id="mail" size="60" value="" class="form-text required" />
                    <div class="description">Description : Une adresse e-mail valide. Cette adresse vous servira à vous identifier sur la plateforme. Tous les messages du site seront envoyés à cette adresse.</div>
                   </div><!--/form-item-->
-                  <div class="form-item" id="edit-conf-mail-wrapper">
-                   <label for="edit-conf-mail">Confirmer l'adresse e-mail : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
-                   <input type="email" maxlength="64" name="conf_mail" id="edit-conf-mail" size="60" value="" class="form-text required" />
+                  <div class="form-item">
+                   <label for="conf-mail">Confirmer l'adresse e-mail : <span class="form-required" title="Ce champ est obligatoire.">*</span></label>
+                   <input type="email" maxlength="64" name="conf_mail" id="conf-mail" size="60" value="" class="form-text required" />
                    <div class="description">Description : Veuillez retaper votre adresse e-mail pour confirmer sa concordance.</div>
                   </div><!--/form-item-->
-                  <div id="edit-comment-wrapper" class="form-item">
-                   <label for="edit-comment">Commentaire : <span title="Ce champ est obligatoire." class="form-required">*</span></label>
-                   <div class="resizable-textarea"><span><textarea class="form-textarea resizable required textarea-processed" id="edit-comment" name="comment" rows="4" cols="60"></textarea><span class="grippie" style="margin-right: -6px;"></span></span></div>
+                  <div class="form-item">
+                   <label for="comment">Commentaire : <span title="Ce champ est obligatoire." class="form-required">*</span></label>
+                   <div class="resizable-textarea"><span><textarea class="form-textarea resizable required textarea-processed" id="comment" name="comment" rows="4" cols="60"></textarea></span></div>
                   </div><!--/form-item-->
                   <label>Inscription à la newsletter</label>
                   <div class="form-checkboxes">
                     <div class="form-item" id="edit-newsletter-subscribe-checkbox-wrapper">
-                      <label class="option" for="edit-am-newsletter-subscribe-checkbox"><input type="checkbox" name="am_newsletter_subscribe_checkbox" id="edit-am-newsletter-subscribe-checkbox" value="1" class="form-checkbox" />Je souhaite m'abonner à la newsletter (2 envois par mois environ)</label>
+                      <label class="option" for="newsletter-subscribe-checkbox"><input type="checkbox" name="am_newsletter_subscribe_checkbox" id="newsletter-subscribe-checkbox" value="1" class="form-checkbox" />Je souhaite m'abonner à la newsletter (2 envois par mois environ)</label>
                     </div><!--/form-item-->
                   </div><!--/form-checkboxes-->
                 </fieldset>

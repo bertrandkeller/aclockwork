@@ -16,6 +16,25 @@
   &:after {clear:both;}
 }
 
+// text
+//------------------------------------------------//
+
+.hyphens() {
+   -ms-word-break: break-all;
+       word-break: break-all;
+       // Non standard for webkit
+       word-break: break-word;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+          hyphens: auto;
+}
+.hidetext() {
+  border:0;
+  font: 0/0 a;
+  text-shadow:none;
+  color:transparent;
+  background-color:transparent;
+}
 
 // grid
 //------------------------------------------------//
@@ -54,7 +73,7 @@
   }
   .link (@ColorLink,@FontWeight:bold) {
     a {font-weight:@FontWeight;text-decoration:none;color:@ColorLink;
-      &:hover,&:active {text-decoration:underline;color:@ColorLink;}
+      &:hover,&:active,&:link {text-decoration:underline;color:@ColorLink;}
       }
   }
 }
@@ -111,7 +130,7 @@
     text-decoration:@TextDecoration;
     color:@ColorLink;
     &:link,&.linklink {font-weight:@FontWeight;color:@ColorLink;}
-    &:hover,&.linkhover,&:focus,&.linkfocus {color:@ColorHover;}
+    &:hover,&.linkhover,&:focus,&.linkfocus {color:@ColorHover;text-decoration:underline;}
     &:active,&.linkactive {color:@ColorLink;}
   }
   // metadata
@@ -134,6 +153,7 @@
       &.hover,&:hover {color:@ColorButton;background-color:darken(@BackgroundButton,10%);.transition(background 0.1s linear 0s);}
       &.active,&:active {color:@ColorButton;background-color:darken(@BackgroundButton,15%);}
       &.checked {color:@ColorButtonChecked;background-color:lighten(@BackgroundButton,20%);background-image:none;}
+      &:link,.link {color:@ColorButton;}
       }
   }
   // button for input

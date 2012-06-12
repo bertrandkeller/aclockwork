@@ -30,10 +30,11 @@
     });
     
     // default top page smooth scroll
-    $('#toppage').click(function(event) {
+    $('.toppage').find('a').click(function(event) {
         $.scrollTo('#top', 1000);
         event.preventDefault();
-    });    
+    });
   });
+  
   
 })(jQuery);

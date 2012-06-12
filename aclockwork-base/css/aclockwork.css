@@ -1805,6 +1805,7 @@ h4 img,
 h5 img,
 h6 img {
   margin: 0;
+  display: block;
 }
 .strike {
   position: relative;
