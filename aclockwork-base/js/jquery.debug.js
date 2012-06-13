@@ -4,7 +4,7 @@
     var $this = $(this) ;
     $this.parent().removeClass("elementoff").addClass("elementon");
     $('.footer_main').before('<div id="include" class="container layout one_column"></div>');
-    $('#include').inc('../themescouade/aclockwork-base/html/model_element.html', null, function() {});
+    $('#include').inc('../aclockwork/aclockwork-base/html/model_element.html', null, function() {});
   });
   $('#nav_debug').find('p.elementon a').live('click', function() {
     var $this = $(this) ;

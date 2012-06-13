@@ -17,17 +17,17 @@
     .nav_command li a span,
     .nav_tabs.publisher li {font-family:'WebSymbolsRegular';font-weight:normal;}
     </style>
-    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-extend/css/font-symbol.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-base/css/aclockwork.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-extend/css/prettify.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-extend/css/fancybox.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-extend/css/reveal.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-extend/css/jnice.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-base/css/debug.css" />
-    <link rel="stylesheet" type="text/css" media="print" href="../themescouade/aclockwork-base/css/print.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../aclockwork/aclockwork-extend/css/font-symbol.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../aclockwork/aclockwork-base/css/aclockwork.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../aclockwork/aclockwork-extend/css/prettify.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../aclockwork/aclockwork-extend/css/fancybox.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../aclockwork/aclockwork-extend/css/reveal.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../aclockwork/aclockwork-base/css/debug.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../aclockwork/aclockwork-base/css/print.css" />
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  
+    <script src="../aclockwork/aclockwork-base/js/jquery-1.4.4.min.js"></script>
+    <script src="../aclockwork/aclockwork-base/js/modernizr.js"></script>
+        
     <!-- Test tools for js errors -->
     <script type="text/javascript" src="https://www.proxino.com/p.js"></script>
     <script type="text/javascript">
@@ -36,28 +36,26 @@
     </script>
     
     <script src="../themescouade/aclockwork-base/js/head.min.js"></script>
-    <script src="../themescouade/aclockwork-base/js/modernizr.js"></script>
     <script type="text/javascript">
       head.js(
-        {tool: "../themescouade/aclockwork-base/js/main.js"},
-        {load: "../themescouade/aclockwork-base/js/jquery.lazyload.mini.js"},
-        {load: "../themescouade/aclockwork-base/js/jquery.cookie.js"},
-        {tool: "../themescouade/aclockwork-base/js/jquery.tipTip.minified.js"},
-        {tool: "../themescouade/aclockwork-base/js/jquery.idTabs.min.js"},
-        {tool: "../themescouade/aclockwork-base/js/jquery.scrollTo.js"},
-        {tool: "../themescouade/aclockwork-base/js/jquery.placeholder.js"},
-        {view: "../themescouade/aclockwork-base/js/jquery.collapse.js"},
-        {view: "../themescouade/aclockwork-base/js/jquery.select.js"},
-        {view: "../themescouade/aclockwork-base/js/accessifyhtml5.jquery.min.js"},
-        {debug:"../themescouade/aclockwork-base/js/jquery.debug.js"},
-        {view: "../themescouade/aclockwork-extend/js/jquery.bxSlider.js"},
-        {debug:"../themescouade/aclockwork-extend/js/jquery.inc.js"},
-        {view: "../themescouade/aclockwork-extend/js/jquery.onepage.nav.js"},
-        {view: "../themescouade/aclockwork-extend/js/jquery.biggerlink.js"},
-        {view: "../themescouade/aclockwork-extend/js/jquery.viewmode.js"},
-        {view: "../themescouade/aclockwork-extend/js/jquery.nice.js"},
-        {view: "../themescouade/aclockwork-extend/js/jcaption.js"},
-        {debug:"../themescouade/aclockwork-extend/js/prettify.js"}
+        {tool: "../aclockwork/aclockwork-base/js/main.js"},
+        {load: "../aclockwork/aclockwork-base/js/jquery.lazyload.mini.js"},
+        {load: "../aclockwork/aclockwork-base/js/jquery.cookie.js"},
+        {tool: "../aclockwork/aclockwork-base/js/jquery.tipTip.minified.js"},
+        {tool: "../aclockwork/aclockwork-base/js/jquery.idTabs.min.js"},
+        {tool: "../aclockwork/aclockwork-base/js/jquery.scrollTo.js"},
+        {tool: "../aclockwork/aclockwork-base/js/jquery.placeholder.js"},
+        {view: "../aclockwork/aclockwork-base/js/jquery.collapse.js"},
+        {view: "../aclockwork/aclockwork-base/js/jquery.select.js"},
+        {view: "../aclockwork/aclockwork-base/js/accessifyhtml5.jquery.min.js"},
+        {debug:"../aclockwork/aclockwork-base/js/jquery.debug.js"},
+        {view: "../aclockwork/aclockwork-extend/js/jquery.bxSlider.js"},
+        {debug:"../aclockwork/aclockwork-extend/js/jquery.inc.js"},
+        {view: "../aclockwork/aclockwork-extend/js/jquery.onepage.nav.js"},
+        {view: "../aclockwork/aclockwork-extend/js/jquery.biggerlink.js"},
+        {view: "../aclockwork/aclockwork-extend/js/jquery.viewmode.js"},
+        {view: "../aclockwork/aclockwork-extend/js/jcaption.js"},
+        {debug:"../aclockwork/aclockwork-extend/js/prettify.js"}
       );
       // Js for model
       head.ready(function(){
@@ -65,23 +63,14 @@
           event.preventDefault();
         });
       });
-      yepnope('ie6!ie7!ie8!../themescouade/aclockwork-extend/js/jquery.autocolumn.js');
-      yepnope('ie6!ie7!../themescouade/aclockwork-base/js/jquery.autocolumn.js');
 
       yepnope({
-        load: ['ie6!ie7!ie8!../themescouade/aclockwork-extend/js/jquery.autocolumn.js', 'ie7!jquery.pseudo.js', 'ie6!ie7!ie8!main-ie.js'] // ie6 or ie7 only (on patch)
+        load: ['ie6!ie7!ie8!../aclockwork/aclockwork-extend/js/jquery.autocolumn.js', 'ie7!../aclockwork/aclockwork-base/js/jquery.pseudo.js', 'ie6!ie7!ie8!../aclockwork/aclockwork-base/js/main-ie.js']
       });
     </script>
     
     <!--[if lte IE 8]>
       <link rel="stylesheet" type="text/css" media="screen" href="themes/themescouade/css/ie.css" />
-      <script type="text/javascript" src="themes/themescouade/aclockwork-extend/js/jquery.autocolumn.js"></script>
-      <script type="text/javascript">
-        $(function(){
-          $('.list_column_medium').columnize({columns:2});
-          $('.list_column_one_third').columnize({columns:3});
-    		});
-      </script>
     <![endif]-->
     
   </head>
@@ -123,7 +112,7 @@
       <div class="banner_main_int container layout">
         
         <div class="block_logo">
-          <h1><a href="#"><img src="../themescouade/aclockwork-base/images/logo_clockwork.png" alt="titre du site" width="300" /></a></h1>
+          <h1><a href="#"><img src="../aclockwork/aclockwork-base/images/logo_clockwork.png" alt="titre du site" width="300" /></a></h1>
         </div>
 
         <form id="search_main" class="search_main" >
