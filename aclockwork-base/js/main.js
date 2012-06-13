@@ -1,10 +1,4 @@
 (function($) {
-  $(window).load(function() {
-    // Add class if js
-    $("html").addClass("js");
-  });
-
-  $(document).ready(function() {
     
     var nav_skiplink = $("#nav_skiplink")
     
@@ -34,7 +28,5 @@
         $.scrollTo('#top', 1000);
         event.preventDefault();
     });
-  });
-  
   
 })(jQuery);

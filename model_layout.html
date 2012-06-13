@@ -19,14 +19,14 @@
     </style>
     <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-extend/css/font-symbol.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-base/css/aclockwork.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-extend/css/css.php?file=prettify.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-extend/css/css.php?file=fancybox.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-extend/css/css.php?file=reveal.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-extend/css/css.php?file=jnice.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-extend/css/prettify.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-extend/css/fancybox.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-extend/css/reveal.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-extend/css/jnice.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../themescouade/aclockwork-base/css/debug.css" />
     <link rel="stylesheet" type="text/css" media="print" href="../themescouade/aclockwork-base/css/print.css" />
 
-    <script src="../themescouade/aclockwork-base/js/jquery-1.4.4.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   
     <!-- Test tools for js errors -->
     <script type="text/javascript" src="https://www.proxino.com/p.js"></script>
@@ -36,21 +36,21 @@
     </script>
     
     <script src="../themescouade/aclockwork-base/js/head.min.js"></script>
+    <script src="../themescouade/aclockwork-base/js/modernizr.js"></script>
     <script type="text/javascript">
       head.js(
         {tool: "../themescouade/aclockwork-base/js/main.js"},
-        {tool: "js/modernizr.custom.js"},
         {load: "../themescouade/aclockwork-base/js/jquery.lazyload.mini.js"},
         {load: "../themescouade/aclockwork-base/js/jquery.cookie.js"},
         {tool: "../themescouade/aclockwork-base/js/jquery.tipTip.minified.js"},
         {tool: "../themescouade/aclockwork-base/js/jquery.idTabs.min.js"},
         {tool: "../themescouade/aclockwork-base/js/jquery.scrollTo.js"},
         {tool: "../themescouade/aclockwork-base/js/jquery.placeholder.js"},
-        {view: "../themescouade/aclockwork-base/js/jquery.bxSlider.js"},
         {view: "../themescouade/aclockwork-base/js/jquery.collapse.js"},
         {view: "../themescouade/aclockwork-base/js/jquery.select.js"},
         {view: "../themescouade/aclockwork-base/js/accessifyhtml5.jquery.min.js"},
         {debug:"../themescouade/aclockwork-base/js/jquery.debug.js"},
+        {view: "../themescouade/aclockwork-extend/js/jquery.bxSlider.js"},
         {debug:"../themescouade/aclockwork-extend/js/jquery.inc.js"},
         {view: "../themescouade/aclockwork-extend/js/jquery.onepage.nav.js"},
         {view: "../themescouade/aclockwork-extend/js/jquery.biggerlink.js"},
@@ -65,11 +65,14 @@
           event.preventDefault();
         });
       });
+      yepnope('ie6!ie7!ie8!../themescouade/aclockwork-extend/js/jquery.autocolumn.js');
+      yepnope('ie6!ie7!../themescouade/aclockwork-base/js/jquery.autocolumn.js');
+
+      yepnope({
+        load: ['ie6!ie7!ie8!../themescouade/aclockwork-extend/js/jquery.autocolumn.js', 'ie7!jquery.pseudo.js', 'ie6!ie7!ie8!main-ie.js'] // ie6 or ie7 only (on patch)
+      });
     </script>
     
-    <!--[if lte IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
     <!--[if lte IE 8]>
       <link rel="stylesheet" type="text/css" media="screen" href="themes/themescouade/css/ie.css" />
       <script type="text/javascript" src="themes/themescouade/aclockwork-extend/js/jquery.autocolumn.js"></script>
@@ -79,12 +82,6 @@
           $('.list_column_one_third').columnize({columns:3});
     		});
       </script>
-    <![endif]-->
-    <!--[if lte IE 7]>
-      <script type="text/javascript" src="themes/themescouade/aclockwork-base/js/jquery.pseudo.js"></script>
-    <![endif]-->
-    <!--[if lte IE 6]>
-      <script type="text/javascript" src="themes/themescouade/aclockwork-base/js/main-ie.js"></script>
     <![endif]-->
     
   </head>
