@@ -1827,8 +1827,8 @@ body {
 h1,
 .h1 {
   margin: 0 0 1em 0;
-  font-size: 2.5em;
-  line-height: 1.1;
+  font-size: 2em;
+  line-height: 1.5;
   font-weight: bold;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: #111111;
@@ -1836,8 +1836,8 @@ h1,
 h2,
 .h2 {
   margin: 0 0 1em 0;
-  font-size: 1.7em;
-  line-height: 1.1;
+  font-size: 1.7143em;
+  line-height: 1.14;
   font-weight: bold;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: #111111;
@@ -1845,8 +1845,8 @@ h2,
 h3,
 .h3 {
   margin: 0 0 0.8em 0;
-  font-size: 1.3em;
-  line-height: 1.1;
+  font-size: 1.4286em;
+  line-height: 1.05;
   font-weight: normal;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: #111111;
@@ -1854,8 +1854,8 @@ h3,
 h4,
 .h4 {
   margin: 0 0 0.5em 0;
-  font-size: 1.1em;
-  line-height: 1.1;
+  font-size: 1.2857em;
+  line-height: 1.17;
   font-weight: normal;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: #111111;
@@ -1863,8 +1863,8 @@ h4,
 h5,
 .h5 {
   margin: 0 0 0.5em 0;
-  font-size: 1em;
-  line-height: 1;
+  font-size: 1.1429em;
+  line-height: 1.31;
   font-weight: normal;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: #111111;
@@ -1873,7 +1873,7 @@ h6,
 .h6 {
   margin: 0 0 0.5em 0;
   font-size: 1em;
-  line-height: 1;
+  line-height: 1.62;
   font-weight: normal;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: #111111;
