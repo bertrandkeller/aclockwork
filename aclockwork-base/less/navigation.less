@@ -24,7 +24,6 @@
 .nav_lang                                 {float:right;font-size:0.8em;}
 
 /* nav stats user */
-.nav_stats_user                           {}
 .nav_stats_user li                        {text-align:center;}
 .nav_stats_user li a                      {text-decoration:none;}
 .nav_stats_user li a strong               {clear:both;font-size:2em;}
@@ -32,11 +31,34 @@
 .nav_stats_user li a:hover                {text-decoration:none;}  
 
 /* nav_anchor */
-.nav_anchor.onepage                       {list-style:none;position:fixed;top:50px;left:20px;z-index:1000000;}
-.nav_anchor.onepage li                    {margin-bottom:2px;} 
-.nav_anchor.onepage a                     {background:#ccc;color:#666;display:block;font-size:11px;padding:5px 10px;text-decoration:none;text-transform:uppercase;}
-.nav_anchor.onepage a:hover               {background:#dedede;}
-.nav_anchor.onepage .current a            {background:#666;color:#ededed;}
+.nav_anchor.onepage ul                    {margin:0;padding:0;list-style:none;}
+.nav_anchor.onepage li                    {display:block;}
+.nav_anchor.onepage a                     {padding:.2em .5em;color:#fff;text-decoration:none;display:block;}
+.nav_anchor.onepage a:link,                 
+.nav_anchor.onepage a:visited             {color:white;display:block;text-decoration:none;.transition(all .7s ease);}
+.nav_anchor.onepage li a:hover            {background:#666;border-left:solid 5px transparent;}
+.nav_anchor.onepage .toc-h2               {padding-left:.3em;}
+.nav_anchor.onepage .toc-h3               {padding-left:.7em;}
+.nav_anchor.onepage .toc-active           {background:#336699;box-shadow:inset -5px 0px 10px -5px #000;}
+
+@media (min-width: 1140px) {
+  .nav_anchor.onepage                       {top:0px;left:0px;height:100%;position:fixed;background:#333;box-shadow:inset -5px 0 5px 0px #000;width:150px;padding-top:20px;color:#fff;}
+  .nav_anchor.onepage ul                    {display:block !important;}
+  .nav_anchor.onepage .toc-link             {display:none !important;}
+}
+
+@media (max-width: 1140px) {
+  .nav_anchor.onepage                       {position:fixed;top:0;padding:0em;width:18%;min-width:360px;background:transparent;}
+  .nav_anchor.onepage .toc-link:link,       
+  .nav_anchor.onepage .toc-link:visited     {color:white;position:relative;display:block;z-index:20;height:33px;line-height:2em;padding:0 .5em;width:100%;background:#444;}
+  .nav_anchor.onepage .toc-link span        {font-size:16px;margin-right:5px;display:inline-block;-webkit-transition:-webkit-transform .4s ease;-moz-transition:-moz-transform .4s ease;-o-transition:-o-transform .4s ease;-ms-transition:-ms-transform .4s ease;transition:transform .4s ease;}
+  .nav_anchor.onepage .toc-link span.rotate {.transform(rotate(180deg));}
+  .nav_anchor.onepage ul                    {position:absolute;z-index:1000;width:103%;background:#222;padding:0;}
+}
+
+@media (max-width: 480px) {
+  .nav_anchor.onepage                       {width:100%;}
+}
 
 /* nav command */
 .nav_command li                           {position:relative;width:100%;line-height:1em;border-bottom:1px solid #b3b3b3;}
@@ -94,7 +116,6 @@
 
 #js-select-replace form,
 #js-select-replace ul li:first-child      {display:none;}
-  
 
 /* nav step */
 .nav_step ol                              {overflow:hidden;display:table;margin:5px 0 10px;width:100%;white-space:nowrap;}
@@ -164,31 +185,9 @@
 .nav_post li:hover .pager_content         {display:block;}
 
 /* nav edit */
-.nav_edit                                 {}
 .nav_edit ul                              {float:right;text-align:right;}
 .nav_edit ul li                           {float:right;margin:0 5px;}
 .nav_edit.select,
 .nav_edit.select ul,
 .nav_edit.select li                       {float:left;text-align:left;}
 .nav_edit.select input                    {float:left;}
-
-/* nav commentary */
-.nav_commentary                           {clear:both;margin:0 5px 1px 0;padding:2px 7px 2px 0;}
-.nav_commentary ul li.first,
-.nav_commentary ul li:first-child         {border:none;}
-.nav_commentary ul li.like                {margin:0 0 0 12px;padding:0 10px;border-left:1px solid olivedrab;}
-.nav_commentary ul li.suppress            {margin:0;padding:0;}
-.nav_commentary ul .commentary span.commentary-link,
-.nav_commentary ul .like span.like-link   {padding:0;}
-.nav_commentary ul .commentary span       {background-position:0 0;border:none;}
-.nav_commentary ul .like span             {background-position:0 -100px;padding:0;}
-.nav_commentary ul li span,
-.nav_commentary ul li div                 {float:left;}
-.nav_commentary ul li .likes              {margin:0 0 0 5px;}
-.nav_commentary ul li .likes a            {display:inline;}
-.nav_commentary ul li span.commentary-link span,
-.nav_commentary ul li a,
-.nav_commentary ul li a:hover             {display:block;padding:0 0 2px;background-color:#fff;cursor:pointer;}
-.nav_commentary span.commentary-link span {margin:0 0 0 0px;padding:0 10px 0 0;color:olivedrab;}
-.nav_commentary .publisher                {clear:both;}
-.nav_commentary li label                  {display:none;}

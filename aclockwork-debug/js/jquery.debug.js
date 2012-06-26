@@ -3,14 +3,19 @@
   $('#nav_debug').find('p.elementoff a').live('click', function() {
     var $this = $(this) ;
     $this.parent().removeClass("elementoff").addClass("elementon");
+    $('body').prepend('<nav id="nav_anchor_onepage" class="nav_anchor onepage" role="navigation"><a href="#" class="toc-link" id="toc-link"><span>&#9660;</span> Table of Contents</a><span id="nav_anchor_onepage_menu"></span></nav>');
     $('.footer_main').before('<div id="include" class="container layout one_column"></div>');
-    $('#include').inc('../aclockwork/aclockwork-base/html/model_element.html', null, function() {});
+    $('#include').load('../themescouade/aclockwork-base/html/model_element.html', null, function() {});
   });
+  
   $('#nav_debug').find('p.elementon a').live('click', function() {
     var $this = $(this) ;
     $this.parent().removeClass("elementon").addClass("elementoff");
     $('#include').remove();
+    $('.nav_anchor').remove();
   });
+  
+  AnchorNav ();
   
   $('#nav_debug').find('p.debug a').live('click', function() {
     
@@ -27,6 +32,15 @@
    if ( $.cookie('modeldebug') == 'debug' ) {
        debug();
    } else if ( $.cookie('modeldebug') == 'normal' ) {}
+   
+   function AnchorNav () {
+     $('#nav_anchor_onepage_menu ul').hide();
+     $('#toc-link').live('click', function(event) {
+       event.preventDefault();
+       $('#nav_anchor_onepage_menu ul').slideToggle();
+       $('#toc-link').find('span').toggleClass('rotate');
+     });
+   }
    
    function debug () {
      $('body').toggleClass("debug");

@@ -1,8 +1,17 @@
 <script>
+      head.js(
+        {debug: "../aclockwork/aclockwork-debug/js/holder.js"}
+      );
       // Lazy load Placeholder for old browser
       head.ready(function(){
         $("img").lazyload({ threshold : 200 });
         $('input[placeholder], textarea[placeholder]').placeholder();
+        $('#nav_anchor_onepage').toc({
+            'selectors': 'h1', //elements to use as headings
+            'container': '.col_main', //element to find all selectors in
+            'smoothScrolling': true, //enable or disable smooth scrolling on click
+            'prefix': 'toc' //prefix for anchor tags and class names
+        });
       });
       // TipTip - Tooltip 
       head.ready(function() {
@@ -13,7 +22,6 @@
       });
       // View
       head.ready(function(){
-        $('#nav_anchor_onepage').onePageNav();
         $('table.mailbox tbody td').biggerlink({clickableclass:'mailboxclickable',hoverclassparent:'mailboxhover'});
         $('#js-list-view li').biggerlink({clickableclass:'listclickable',otherstriggermaster:false});
         $('.block_gallery img').jcaption({
@@ -43,27 +51,11 @@
       });
 
 </script>
-
 <section class="col_main">
 <div class="col_main_int">
   
   <section class="col1">
     <div class="col_content">
-      
-      <ul id="nav_anchor_onepage" class="nav_anchor onepage" role="navigation">
-        <li class="current"><a href="#top">En-tête</a></li>
-        <li><a href="#navigation">Navigation</a></li>
-        <li><a href="#content">Content</a></li>
-        <li><a href="#link">Links</a></li>
-        <li><a href="#alert">Alerts & Messages</a></li>
-        <li><a href="#popover">Popover</a></li>
-        <li><a href="#button">Buttons</a></li>
-        <li><a href="#table">Tableaux</a></li>
-        <li><a href="#grid">Grille</a></li>
-        <li><a href="#form">Formulaire</a></li>
-        <li><a href="#block">Block</a></li>
-        <li><a href="#listes">List</a></li>
-      </ul>
       
       <article class="block_article">
         <div class="block_article_content">
@@ -2143,12 +2135,12 @@
           <div class="block_gallery">
            <h2>Block gallery</h2>
              <ul>
-                <li><img width="193" height="60" alt="Image 1" src="http://placehold.it/168x60"></li>
-                <li><img width="193" height="60" alt="Image 2" src="http://placehold.it/168x60"></li>
-                <li><img width="193" height="60" alt="Image 3" src="http://placehold.it/168x60"></li>
-                <li><img width="193" height="60" alt="Image 4" src="http://placehold.it/168x60"></li>
-                <li><img width="193" height="60" alt="Image 5" src="http://placehold.it/168x60"></li>
-                <li><img width="193" height="60" alt="Image 6" src="http://placehold.it/168x60"></li>
+                <li><img width="193" height="60" alt="Image 1" src="holder.js/168x60/social" /></li>
+                <li><img width="193" height="60" alt="Image 2" src="holder.js/168x60/social" /></li>
+                <li><img width="193" height="60" alt="Image 3" src="holder.js/168x60/social" /></li>
+                <li><img width="193" height="60" alt="Image 4" src="holder.js/168x60/social" /></li>
+                <li><img width="193" height="60" alt="Image 5" src="holder.js/168x60/social" /></li>
+                <li><img width="193" height="60" alt="Image 6" src="holder.js/168x60/social" /></li>
               </ul>
           </div><!--/block_gallery-->
           
@@ -2199,7 +2191,7 @@
                 <li>
                   <div class="block">
                     <div class="section_aside left">
-                      <img width="80" height="80" alt="" src="http://placehold.it/80x80">
+                      <img width="80" height="80" src="holder.js/80x80/social" />
                     </div>
                     <div class="section_main">
                       <div class="block_content">
@@ -2217,7 +2209,7 @@
                 <li>
                   <div class="block">
                     <div class="section_aside left">
-                      <img width="80" height="80" alt="" src="http://placehold.it/80x80">
+                      <img width="80" height="80" src="holder.js/80x80/social" />
                     </div>
                     <div class="section_main">
                       <div class="block_content">
@@ -2236,7 +2228,7 @@
                 <li>
                   <div class="block">
                     <div class="section_aside left">
-                      <img width="80" height="80" alt="" src="http://placehold.it/80x80">
+                      <img width="80" height="80" src="holder.js/80x80/social" />
                     </div>
                     <div class="section_main">
                       <div class="block_content">
@@ -2261,7 +2253,7 @@
                 <li>
                   <div class="block">
                     <div class="section_aside left">
-                      <img width="80" height="80" alt="" src="http://placehold.it/80x80">
+                      <img width="80" height="80" src="holder.js/80x80" />
                     </div>
                     <div class="section_main">
                       <div class="block_content">
