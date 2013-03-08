@@ -5519,7 +5519,7 @@ a[href$=".swf"] {
     width: 29%;
   }
   .col_aside {
-    margin: 0;
+    margin: 0 0 1em;
     width: 100%;
   }
   .two_column .col1 {

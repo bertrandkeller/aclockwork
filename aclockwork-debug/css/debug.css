@@ -8,7 +8,7 @@
 /* Nav debug*/
 
 .nav_debug                                 {min-height:0px !important;list-style:none;position:fixed;bottom:50px;right:20px;z-index:100;}
-.nav_debug a                               {width:70px;}
+.nav_debug a                               {width:5em;}
 
 body.debug                                 {font-size:85%;font-family:Palatino,'Palatino Linotype','Book Antiqua',FreeSerif,Georgia,serif;background:#efefff;}
 body.debug .block_article                  {margin:12px 0 12px 0;padding:0 0 20px 0;border-bottom:#ccc 2px dashed;}
@@ -19,9 +19,7 @@ body.debug .block_context span             {background:#efefff;}
 body.debug .grid .col1,
 body.debug .grid .col2,
 body.debug .grid .col_aside                {background:rgba(173,216,230,0.8);}
-body.debug .grid .container_int            {overflow:hidden;margin:10px 0;padding:10px 0 0;background-color:#999;}
-body.debug .grid .col_main_int             {}
-body.debug .grid .container_int            {padding:20px 0 0;}
+body.debug .grid .container_int            {overflow:hidden;margin:.5em 0;padding:.5em 0;background-color:#999;}
 body.debug .grid .col_content              {margin:20px 10px 0;}
 
 /* Navigation */
