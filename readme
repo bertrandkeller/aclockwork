@@ -1,0 +1,121 @@
+# aclockwork
+
+HTML framework with less
+
+## Key Features & Benefits
+
+*   **Modular CSS:** Organized using LESS for easy customization and maintenance.
+*   **Responsive Grid System:** Built-in grid system for creating responsive layouts.
+*   **Base Styles:** Provides a solid foundation of CSS resets and basic typography.
+*   **Extensible:** Designed to be easily extended with additional components and plugins.
+*   **IE Support:** Includes specific files and scripts to handle older Internet Explorer versions.
+*   **Debug Tools:** Offers debug CSS and JavaScript files for easier development and testing.
+
+## Prerequisites & Dependencies
+
+*   Web browser (Chrome, Firefox, Safari, Edge, etc.)
+*   Text editor or IDE (Visual Studio Code, Sublime Text, Atom, etc.)
+
+The framework includes the following JavaScript libraries:
+
+*   jQuery (versions 1.4.4 and others for specific features)
+*   Modernizr
+*   Various jQuery plugins (e.g., lazyload, collapse, cookie, idTabs, scrollTo, select, tipTip, placeholder)
+
+## Installation & Setup Instructions
+
+1.  **Download:** Clone or download the repository.
+
+    ```bash
+    git clone https://github.com/bertrandkeller/aclockwork.git
+    ```
+
+2.  **Project Structure:**  Understand the folder structure:
+
+    *   `aclockwork-base`: Core CSS, JavaScript, and LESS files.
+    *   `aclockwork-debug`: Debugging tools and utilities.
+    *   `aclockwork-extend`:  Additional CSS and JavaScript extensions (e.g., fancybox, flexslider).
+    *   `aclockwork-template`: HTML templates.
+
+3.  **Include Necessary Files:**  In your HTML file, include the necessary CSS and JavaScript files from the appropriate directories.
+
+    ```html
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>aclockwork Example</title>
+        <link rel="stylesheet" href="aclockwork-base/css/aclockwork.css">
+        <!-- Optional: Include IE specific stylesheet -->
+        <!--[if lt IE 9]>
+          <link rel="stylesheet" href="aclockwork-base/css/ie.css">
+        <![endif]-->
+        <script src="aclockwork-base/js/modernizr.js"></script>
+    </head>
+    <body>
+
+        <!-- Your Content Here -->
+
+        <script src="aclockwork-base/js/head.min.js"></script>
+        <script src="aclockwork-base/js/jquery.js"></script> <!-- Add jQuery if required by other plugins -->
+        <script src="aclockwork-base/js/main.js"></script>
+    </body>
+    </html>
+    ```
+
+4.  **Compile LESS (Optional):**  If you want to customize the framework, modify the LESS files in `aclockwork-base/less` and compile them into CSS.  You'll need a LESS compiler (e.g., `lessc` command-line tool or a GUI application).
+
+    ```bash
+    lessc aclockwork.less aclockwork-base/css/aclockwork.css
+    ```
+
+## Usage Examples & API Documentation
+
+### Basic Grid Layout
+
+```html
+<div class="grid">
+    <div class="grid_4">Column 1</div>
+    <div class="grid_4">Column 2</div>
+    <div class="grid_4">Column 3</div>
+</div>
+```
+
+### Using a Button
+
+```html
+<a href="#" class="button">Click Me</a>
+```
+
+### LESS Variables (Customization)
+
+Modify the variables in `aclockwork-base/less/all_parameters.less` to customize the framework's appearance. For example:
+
+```less
+@base-font-size: 16px;
+@primary-color: #007bff;
+```
+
+## Configuration Options
+
+The framework's behavior can be configured by modifying the LESS variables in `aclockwork-base/less/all_parameters.less`.  These variables control aspects such as:
+
+*   Colors
+*   Fonts
+*   Grid system settings
+*   Spacing
+*   Border radii
+
+## Contributing Guidelines
+
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix.
+3.  Make your changes and commit them with descriptive messages.
+4.  Submit a pull request.
+
+## License Information
+
+License not specified.
+
+## Acknowledgments
+
+*   This framework utilizes various open-source JavaScript libraries, including jQuery and Modernizr.  See individual file headers for specific license information.
